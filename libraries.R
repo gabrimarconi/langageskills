@@ -1,6 +1,6 @@
 
 # install this if not yet done
-install.packages("ggplot2")
+#install.packages("ggplot2")
 require(devtools)
 #install_version("eurostat", version = "3.1.5", repos = "http://cran.us.r-project.org")
 
