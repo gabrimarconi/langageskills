@@ -6,12 +6,12 @@ source("libraries.R")
 
 
 get_language <- function(foreign="english", adtext="en", occup_average=F) {
-  #foreign <- "english"
+  #foreign <- "English"
   #adtext <- "en"
   #occup_average <- T
   
   # get the data you need
-  myquery1 <- "SELECT COUNT(DISTINCT oja_id) AS total, nuts3_id, nuts3 FROM WIHAccessCatalog.wih_oja_latest.wih_oja_blended WHERE first_active_year=2021 GROUP BY nuts3_id, nuts3, occupation4d_id, occupation4d LIMIT 1000000"
+  myquery1 <- "SELECT COUNT(DISTINCT oja_id) AS total, nuts3_id, nuts3 FROM WIHAccessCatalog.wih_oja_latest.wih_oja_blended WHERE first_active_year=2021 GROUP BY nuts3_id, nuts3 LIMIT 1000000"
   myquery2 <- paste0("SELECT COUNT(DISTINCT oja_id) AS foreign, nuts3_id, nuts3 FROM WIHAccessCatalog.wih_oja_latest.wih_oja_blended WHERE (first_active_year=2021 AND (language='",adtext,"' OR skill='",foreign,"')) GROUP BY nuts3_id, nuts3 LIMIT 1000000")
   if (occup_average) {
     myquery1 <- "SELECT COUNT(DISTINCT oja_id) AS total, nuts3_id, nuts3, occupation3d_id, occupation3d FROM WIHAccessCatalog.wih_oja_latest.wih_oja_blended WHERE first_active_year=2021 GROUP BY nuts3_id, nuts3, occupation3d_id, occupation3d LIMIT 1000000"
@@ -30,11 +30,11 @@ get_language <- function(foreign="english", adtext="en", occup_average=F) {
     average_occupations <- function(nutregion) {mean(fltable_nuts$prop[fltable_nuts$nuts3_id==nutregion])}
     temp_avg_occupations <- as.data.frame(cbind( sapply(unique(fltable_nuts$nuts3_id),average_occupations) , unique(fltable_nuts$nuts3_id)))
     colnames(temp_avg_occupations) <- c("avg_prop","nuts3_id")
-    fltable_nuts <- merge(fltable_nuts,temp_avg_occupations, all.x = T, by="nuts3_id")
-    fltable_nuts$prop <- fltable_nuts$avg_prop
-    fltable_nuts <- fltable_nuts[duplicated(fltable_nuts$nuts3_id)==F,]
-  }
-  
+    fltable_nuts_occu <- merge(fltable_nuts,temp_avg_occupations, all.x = T, by="nuts3_id")
+    fltable_nuts_occu$prop <- as.numeric(fltable_nuts_occu$avg_prop)
+    fltable_nuts <- fltable_nuts_occu[duplicated(fltable_nuts_occu$nuts3_id)==F,]
+  } else if(occup_average==F) {fltable_nuts_occu <- as.data.frame("NA")}
+  print(summary(fltable_nuts$prop))
  
   # generate a categorical variable for the proportion of ads requiring the foreign language
   fltable_nuts$catprop <- floor(100*as.numeric(fltable_nuts$prop))
@@ -42,7 +42,6 @@ get_language <- function(foreign="english", adtext="en", occup_average=F) {
   fltable_nuts$catprop <- fltable_nuts$catprop/100
   fltable_nuts$catprop[fltable_nuts$catprop>.7] <- .7
   fltable_nuts$catprop <- paste0(">", as.character(fltable_nuts$catprop))
-  print(summary(fltable_nuts$prop))
   fltable_nuts <- fltable_nuts[order(fltable_nuts$prop, decreasing = T),]
   
   # merge with the geo information needed to draw maps, using Eurostat's function
@@ -61,14 +60,23 @@ get_language <- function(foreign="english", adtext="en", occup_average=F) {
                 Map produced in R with a help from Eurostat-package <github.com/ropengov/eurostat/>") 
   
   # return output: map, data on nuts3 regions, data with map information added
-  myoutput <- list(mymap, fltable_nuts, fltable_nuts_geo)
+  myoutput <- list(mymap, fltable_nuts, fltable_nuts_geo, fltable_nuts_occu)
   return(myoutput)
     
 }
 
-english <- get_language(foreign = "english", adtext="en", occup_average = T)
-german <- get_language(foreign = "german", adtext="de")
-french <- get_language(foreign = "french", adtext="fr")
-french[[1]]
-german[[1]]
+english <- get_language(foreign = "English", adtext="en", occup_average = T)
+german <- get_language(foreign = "German", adtext="de", occup_average = T)
+french <- get_language(foreign = "French", adtext="fr", occup_average = T)
 english[[1]]
+german[[1]]
+french[[1]]
+write.csv(english[[2]], "english.csv")
+write.csv(german[[2]], "german.csv")
+write.csv(french[[2]], "french.csv")
+write.csv(english[[4]], "english_occu.csv")
+write.csv(german[[4]], "german_occu.csv")
+write.csv(french[[4]], "french_occu.csv")
+
+
+
