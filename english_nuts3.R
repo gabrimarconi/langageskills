@@ -14,7 +14,7 @@ get_language <- function(foreign="english", adtext="en", occup_average=F) {
   #occup_average <- F
   
   # get the data you need
-  myquery1 <- "SELECT COUNT(DISTINCT oja_id) AS total, nuts3_id, nuts3, country_id FROM WIHAccessCatalog.WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2021 GROUP BY nuts3_id, nuts3, country_id LIMIT 1000000"
+  myquery1 <- "SELECT COUNT(DISTINCT oja_id) AS total, nuts3_id, nuts3, country_id FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2021 GROUP BY nuts3_id, nuts3, country_id LIMIT 1000000"
   myquery2 <- paste0("SELECT COUNT(DISTINCT oja_id) AS foreign, nuts3_id, nuts3, country_id FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 AND (language='",adtext,"' OR skill='",foreign,"' OR skill_hier1_id='",adtext,"')) GROUP BY nuts3_id, nuts3, country_id LIMIT 1000000")
   if (occup_average) {
     myquery1 <- "SELECT COUNT(DISTINCT oja_id) AS total, nuts3_id, nuts3, country_id, occupation3d_id, occupation3d FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2021 GROUP BY nuts3_id, nuts3, country_id, occupation3d_id, occupation3d LIMIT 1000000"
@@ -58,7 +58,9 @@ get_language <- function(foreign="english", adtext="en", occup_average=F) {
   # draw map
   # (NB: you can find a list of R colours here: http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/   )
   # write footnotes
-  mynote1 <- "Notes: Average proportion across all ads"
+  mynote0 <- paste0("\nThe estimated proportions include both ads written in ", foreign, " and ads explicitly requiring ", foreign)
+  if (foreign == "Chinese" | foreign == "at least one foreign language") {mynote0 <- paste0("\nThe estimated proportions include ads explicitly requiring ", foreign)}
+  mynote1 <- paste0("Notes: Average proportion across all ads")
   if (occup_average==T) {mynote1 <- "Note: Average across the proportions estimated for each 3-digit ISCO occupational category"}
   out_of_map <- fltable_nuts_geo[(fltable_nuts_geo$long < (-12) | fltable_nuts_geo$long > 30) & duplicated(fltable_nuts_geo$nuts3_id)==F, c("nuts3", "prop")]
   out_of_map$note <- paste0(out_of_map$nuts3, " ", round(as.numeric(out_of_map$prop), 2))
@@ -77,7 +79,7 @@ get_language <- function(foreign="english", adtext="en", occup_average=F) {
     guides(fill = guide_legend(reverse=T, title = "")) +
     labs(title=paste0("Online job ads requiring ",foreign),
          subtitle="Proportion by NUTS-3 regions, 2021",
-         caption=paste0(mynote1, mynote2, mynote3) ) +
+         caption=paste0(mynote1, mynote0, mynote2, mynote3) ) +
     theme(
       plot.title = element_text(hjust = 0.5, size = 26),    # Center title position and size
       plot.subtitle = element_text(hjust = 0.5, size = 18),            # Center subtitle
@@ -134,6 +136,7 @@ write.csv(english[[2]], "english.csv")
 write.csv(german[[2]], "german.csv")
 write.csv(french[[2]], "french.csv")
 write.csv(anyfl[[2]], "anyfl.csv")
+write.csv(chinese[[2]], "chinese.csv")
 write.csv(english[[4]], "english_occu.csv")
 write.csv(german[[4]], "german_occu.csv")
 write.csv(french[[4]], "french_occu.csv")
