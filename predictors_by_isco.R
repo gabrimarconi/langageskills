@@ -5,7 +5,7 @@ source("libraries_eurostat.R")
 setup_access("user")
 
 myisco <- "1d"
-mylanguage <- "Chinese"
+mylanguage <- "Spanish"
 
 
 # run generic queries for total nr of ads and total number of ads requiring english, by occupation

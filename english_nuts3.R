@@ -5,20 +5,25 @@ source("libraries.R")
 source("libraries_eurostat.R")
 setup_access("user")
 
-get_language <- function(foreign="english", adtext="en", occup_average=F) {
+#wih_oja_blended_v1_2021q4_r20220224
+#wih_oja_blended_v1_2022q4_r20230130
+
+get_language <- function(foreign="english", adtext="en", occup_average=F, mytable="wih_oja_blended_v1_2021q4_r20220224", myyear="2021") {
   #foreign <- "English"
   #adtext <- "en"
   #foreign <- "AtLeast1FL"
   #adtext <- "http://data.europa.eu/esco/skill/L1"
   #occup_average <- T
   #occup_average <- F
+  #mytable <- "wih_oja_blended_v1_2021q4_r20220224"
+  #myyear <- "2021"
   
   # get the data you need
-  myquery1 <- "SELECT COUNT(DISTINCT oja_id) AS total, nuts3_id, nuts3, country_id FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2021 GROUP BY nuts3_id, nuts3, country_id LIMIT 1000000"
-  myquery2 <- paste0("SELECT COUNT(DISTINCT oja_id) AS foreign, nuts3_id, nuts3, country_id FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 AND (language='",adtext,"' OR skill='",foreign,"' OR skill_hier1_id='",adtext,"')) GROUP BY nuts3_id, nuts3, country_id LIMIT 1000000")
+  myquery1 <- paste0("SELECT COUNT(DISTINCT oja_id) AS total, nuts3_id, nuts3, country_id FROM WIHAccessCatalog.wih_oja_versioned.",mytable," WHERE first_active_year=",myyear," GROUP BY nuts3_id, nuts3, country_id LIMIT 1000000")
+  myquery2 <- paste0("SELECT COUNT(DISTINCT oja_id) AS foreign, nuts3_id, nuts3, country_id FROM WIHAccessCatalog.wih_oja_versioned.",mytable," WHERE (first_active_year=2021 AND (language='",adtext,"' OR skill='",foreign,"' OR skill_hier1_id='",adtext,"')) GROUP BY nuts3_id, nuts3, country_id LIMIT 1000000")
   if (occup_average) {
-    myquery1 <- "SELECT COUNT(DISTINCT oja_id) AS total, nuts3_id, nuts3, country_id, occupation3d_id, occupation3d FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2021 GROUP BY nuts3_id, nuts3, country_id, occupation3d_id, occupation3d LIMIT 1000000"
-    myquery2 <- paste0("SELECT COUNT(DISTINCT oja_id) AS foreign, nuts3_id, nuts3, country_id, occupation3d_id, occupation3d FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 AND (language='",adtext,"' OR skill='",foreign,"' OR skill_hier1_id='",adtext,"')) GROUP BY nuts3_id, nuts3, country_id, occupation3d_id, occupation3d LIMIT 1000000")
+    myquery1 <- paste0("SELECT COUNT(DISTINCT oja_id) AS total, nuts3_id, nuts3, country_id, occupation3d_id, occupation3d FROM WIHAccessCatalog.wih_oja_versioned.",mytable," WHERE first_active_year=2021 GROUP BY nuts3_id, nuts3, country_id, occupation3d_id, occupation3d LIMIT 1000000")
+    myquery2 <- paste0("SELECT COUNT(DISTINCT oja_id) AS foreign, nuts3_id, nuts3, country_id, occupation3d_id, occupation3d FROM WIHAccessCatalog.wih_oja_versioned.",mytable," WHERE (first_active_year=2021 AND (language='",adtext,"' OR skill='",foreign,"' OR skill_hier1_id='",adtext,"')) GROUP BY nuts3_id, nuts3, country_id, occupation3d_id, occupation3d LIMIT 1000000")
   }
   print(myquery1)
   print(myquery2)
@@ -78,7 +83,7 @@ get_language <- function(foreign="english", adtext="en", occup_average=F) {
     # lims(x = c(-17,30), y = c(27,70)) +
     guides(fill = guide_legend(reverse=T, title = "")) +
     labs(title=paste0("Online job ads requiring ",foreign),
-         subtitle="Proportion by NUTS-3 regions, 2021",
+         subtitle=paste0("Proportion by NUTS-3 regions, ", myyear),
          caption=paste0(mynote1, mynote0, mynote2, mynote3) ) +
     theme(
       plot.title = element_text(hjust = 0.5, size = 26),    # Center title position and size
@@ -97,7 +102,7 @@ get_language <- function(foreign="english", adtext="en", occup_average=F) {
   skillname <- substr(skillname, (nchar(skillname)-10),(nchar(skillname)))
   adlang <- gsub("/|:|\\.","",adtext)
   adlang <- substr(adlang, (nchar(adlang)-1),(nchar(adlang)))
-  basename <- paste0(skillname,"_",adlang,"_",substr(as.character(occup_average),1,1))
+  basename <- paste0(skillname,"_",adlang,substr(as.character(occup_average),1,1),"_",myyear,substr(mytable,27,31))
   write.csv(fltable_nuts, paste0(basename, ".csv"))
   write.csv(fltable_nuts_occu, paste0(basename, "_occu.csv"))
   write.csv(countrytable, paste0(basename, "_country.csv"))
@@ -112,19 +117,89 @@ get_language <- function(foreign="english", adtext="en", occup_average=F) {
     
 }
 
-english <- get_language(foreign = "English", adtext="en", occup_average = T)
-german <- get_language(foreign = "German", adtext="de", occup_average = T)
-french <- get_language(foreign = "French", adtext="fr", occup_average = T)
-anyfl <- get_language(foreign = "at least one foreign language", adtext="http://data.europa.eu/esco/skill/L1", occup_average = T)
-spanish <- get_language(foreign = "Spanish", adtext="es", occup_average = T)
-chinese <- get_language(foreign = "Chinese", adtext="notapplicable", occup_average = T)
+### year 2022
 
-english <- get_language(foreign = "English", adtext="en", occup_average = F)
-german <- get_language(foreign = "German", adtext="de", occup_average = F)
-french <- get_language(foreign = "French", adtext="fr", occup_average = F)
-anyfl <- get_language(foreign = "at least one foreign language", adtext="http://data.europa.eu/esco/skill/L1", occup_average = F)
-spanish <- get_language(foreign = "Spanish", adtext="es", occup_average = F)
-chinese <- get_language(foreign = "Chinese", adtext="notapplicable", occup_average = F)
+english <- get_language(foreign = "English", adtext="en", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2022")
+german <- get_language(foreign = "German", adtext="de", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2022")
+french <- get_language(foreign = "French", adtext="fr", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2022")
+anyfl <- get_language(foreign = "at least one foreign language", adtext="http://data.europa.eu/esco/skill/L1", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2022")
+spanish <- get_language(foreign = "Spanish", adtext="es", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2022")
+chinese <- get_language(foreign = "Chinese", adtext="notapplicable", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2022")
+
+english <- get_language(foreign = "English", adtext="en", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2022")
+german <- get_language(foreign = "German", adtext="de", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2022")
+french <- get_language(foreign = "French", adtext="fr", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2022")
+anyfl <- get_language(foreign = "at least one foreign language", adtext="http://data.europa.eu/esco/skill/L1", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2022")
+spanish <- get_language(foreign = "Spanish", adtext="es", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2022")
+chinese <- get_language(foreign = "Chinese", adtext="notapplicable", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2022")
+
+### year 2021
+
+# new release
+
+english <- get_language(foreign = "English", adtext="en", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2021")
+german <- get_language(foreign = "German", adtext="de", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2021")
+french <- get_language(foreign = "French", adtext="fr", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2021")
+anyfl <- get_language(foreign = "at least one foreign language", adtext="http://data.europa.eu/esco/skill/L1", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2021")
+spanish <- get_language(foreign = "Spanish", adtext="es", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2021")
+chinese <- get_language(foreign = "Chinese", adtext="notapplicable", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2021")
+
+english <- get_language(foreign = "English", adtext="en", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2021")
+german <- get_language(foreign = "German", adtext="de", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2021")
+french <- get_language(foreign = "French", adtext="fr", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2021")
+anyfl <- get_language(foreign = "at least one foreign language", adtext="http://data.europa.eu/esco/skill/L1", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2021")
+spanish <- get_language(foreign = "Spanish", adtext="es", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2021")
+chinese <- get_language(foreign = "Chinese", adtext="notapplicable", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2021")
+
+# old release
+
+english <- get_language(foreign = "English", adtext="en", occup_average = T, mytable = "wih_oja_blended_v1_2021q4_r20220224", myyear = "2021")
+german <- get_language(foreign = "German", adtext="de", occup_average = T, mytable = "wih_oja_blended_v1_2021q4_r20220224", myyear = "2021")
+french <- get_language(foreign = "French", adtext="fr", occup_average = T, mytable = "wih_oja_blended_v1_2021q4_r20220224", myyear = "2021")
+anyfl <- get_language(foreign = "at least one foreign language", adtext="http://data.europa.eu/esco/skill/L1", occup_average = T, mytable = "wih_oja_blended_v1_2021q4_r20220224", myyear = "2021")
+spanish <- get_language(foreign = "Spanish", adtext="es", occup_average = T, mytable = "wih_oja_blended_v1_2021q4_r20220224", myyear = "2021")
+chinese <- get_language(foreign = "Chinese", adtext="notapplicable", occup_average = T, mytable = "wih_oja_blended_v1_2021q4_r20220224", myyear = "2021")
+
+english <- get_language(foreign = "English", adtext="en", occup_average = F, mytable = "wih_oja_blended_v1_2021q4_r20220224", myyear = "2021")
+german <- get_language(foreign = "German", adtext="de", occup_average = F, mytable = "wih_oja_blended_v1_2021q4_r20220224", myyear = "2021")
+french <- get_language(foreign = "French", adtext="fr", occup_average = F, mytable = "wih_oja_blended_v1_2021q4_r20220224", myyear = "2021")
+anyfl <- get_language(foreign = "at least one foreign language", adtext="http://data.europa.eu/esco/skill/L1", occup_average = F, mytable = "wih_oja_blended_v1_2021q4_r20220224", myyear = "2021")
+spanish <- get_language(foreign = "Spanish", adtext="es", occup_average = F, mytable = "wih_oja_blended_v1_2021q4_r20220224", myyear = "2021")
+chinese <- get_language(foreign = "Chinese", adtext="notapplicable", occup_average = F, mytable = "wih_oja_blended_v1_2021q4_r20220224", myyear = "2021")
+
+
+### year 2020
+
+english <- get_language(foreign = "English", adtext="en", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2020")
+german <- get_language(foreign = "German", adtext="de", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2020")
+french <- get_language(foreign = "French", adtext="fr", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2020")
+anyfl <- get_language(foreign = "at least one foreign language", adtext="http://data.europa.eu/esco/skill/L1", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2020")
+spanish <- get_language(foreign = "Spanish", adtext="es", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2020")
+chinese <- get_language(foreign = "Chinese", adtext="notapplicable", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2020")
+
+english <- get_language(foreign = "English", adtext="en", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2020")
+german <- get_language(foreign = "German", adtext="de", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2020")
+french <- get_language(foreign = "French", adtext="fr", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2020")
+anyfl <- get_language(foreign = "at least one foreign language", adtext="http://data.europa.eu/esco/skill/L1", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2020")
+spanish <- get_language(foreign = "Spanish", adtext="es", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2020")
+chinese <- get_language(foreign = "Chinese", adtext="notapplicable", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2020")
+
+### year 2019
+
+english <- get_language(foreign = "English", adtext="en", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2019")
+german <- get_language(foreign = "German", adtext="de", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2019")
+french <- get_language(foreign = "French", adtext="fr", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2019")
+anyfl <- get_language(foreign = "at least one foreign language", adtext="http://data.europa.eu/esco/skill/L1", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2019")
+spanish <- get_language(foreign = "Spanish", adtext="es", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2019")
+chinese <- get_language(foreign = "Chinese", adtext="notapplicable", occup_average = T, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2019")
+
+english <- get_language(foreign = "English", adtext="en", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2019")
+german <- get_language(foreign = "German", adtext="de", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2019")
+french <- get_language(foreign = "French", adtext="fr", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2019")
+anyfl <- get_language(foreign = "at least one foreign language", adtext="http://data.europa.eu/esco/skill/L1", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2019")
+spanish <- get_language(foreign = "Spanish", adtext="es", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2019")
+chinese <- get_language(foreign = "Chinese", adtext="notapplicable", occup_average = F, mytable = "wih_oja_blended_v1_2022q4_r20230130", myyear = "2019")
+
 
 german[[1]]
 french[[1]]
@@ -132,24 +207,137 @@ english[[1]]
 anyfl[[1]]
 spanish[[1]]
 chinese[[1]]
-write.csv(english[[2]], "english.csv")
-write.csv(german[[2]], "german.csv")
-write.csv(french[[2]], "french.csv")
-write.csv(anyfl[[2]], "anyfl.csv")
-write.csv(chinese[[2]], "chinese.csv")
-write.csv(english[[4]], "english_occu.csv")
-write.csv(german[[4]], "german_occu.csv")
-write.csv(french[[4]], "french_occu.csv")
-write.csv(anyfl[[4]], "anyfl_occu.csv")
 
-total_ads <- get_data("SELECT COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2021 AND skill!='' LIMIT 1")
 
-skill_table <- get_data("SELECT skill, skill_hier1_id, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2021 GROUP BY skill, skill_hier1_id ORDER BY ads DESC LIMIT 1000000")
-
-skill_table_lang <- get_data("SELECT skill, skill_hier1_id, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2021 AND skill_hier1_id='http://data.europa.eu/esco/skill/L1' GROUP BY skill, skill_hier1_id ORDER BY ads DESC LIMIT 1000000")
-write.csv(skill_table_lang, "skill_table_lang.csv")
-
-skill_table_lang$prop <- as.numeric(skill_table_lang$ads) / as.numeric(total_ads)
+### table about all languages
+# skill_table_lang$prop <- as.numeric(skill_table_lang$ads) / as.numeric(total_ads)
 
 get_data("SELECT COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 LIMIT 1")
+
+### skill tables with all skills
+
+skill_table_2021 <- get_data("SELECT skill, skill_hier1_id, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2021 GROUP BY skill, skill_hier1_id ORDER BY ads DESC LIMIT 1000000")
+write.csv(skill_table_2021, "skill_table_2021.csv")
+
+# separazione
+write.csv("separazione", "separazione.csv")
+
+skill_table_year <- get_data("SELECT skill, skill_hier1_id, first_active_year, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE first_active_year=2021 GROUP BY skill, skill_hier1_id, first_active_year ORDER BY first_active_year, ads DESC LIMIT 1000000")
+write.csv(skill_table_year, "skill_table_year.csv")
+
+skill_table_year_country <- get_data("SELECT skill, skill_hier1_id, first_active_year, country, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE first_active_year=2021 GROUP BY skill, skill_hier1_id, first_active_year, country ORDER BY first_active_year, ads DESC LIMIT 1000000")
+write.csv(skill_table_year, "skill_table_year_country.csv")
+
+### total ads
+
+total_ads_2021 <- get_data("SELECT COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2021 AND skill!='' LIMIT 1")
+skill_table_lang_2021 <- get_data("SELECT skill, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2021 AND skill_hier1_id='http://data.europa.eu/esco/skill/L1' GROUP BY skill ORDER BY ads DESC LIMIT 1000000")
+skill_table_lang_2021$prop <- as.numeric(skill_table_lang_2021$ads) / as.numeric(total_ads_2021$ads)
+write.csv(skill_table_lang_2021, "skill_table_lang_2021.csv")
+
+total_ads_2020 <- get_data("SELECT COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2020 AND skill!='' LIMIT 1")
+skill_table_lang_2020 <- get_data("SELECT skill, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2020 AND skill_hier1_id='http://data.europa.eu/esco/skill/L1' GROUP BY skill ORDER BY ads DESC LIMIT 1000000")
+skill_table_lang_2020$prop <- as.numeric(skill_table_lang_2020$ads) / as.numeric(total_ads_2020$ads)
+write.csv(skill_table_lang_2020, "skill_table_lang_2020.csv")
+
+total_ads_2019 <- get_data("SELECT COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2019 AND skill!='' LIMIT 1")
+skill_table_lang_2019 <- get_data("SELECT skill, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2019 AND skill_hier1_id='http://data.europa.eu/esco/skill/L1' GROUP BY skill ORDER BY ads DESC LIMIT 1000000")
+skill_table_lang_2019$prop <- as.numeric(skill_table_lang_2019$ads) / as.numeric(total_ads_2019$ads)
+write.csv(skill_table_lang_2019, "skill_table_lang_2019.csv")
+
+# by country and year, without ads with missing skills
+
+total_ads_year <- get_data("SELECT COUNT(DISTINCT oja_id) AS ads, first_active_year FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE first_active_year=2021 AND skill!='' GROUP BY first_active_year LIMIT 1")
+write.csv(total_ads_year, "total_ads_year.csv")
+total_ads_year_country <- get_data("SELECT COUNT(DISTINCT oja_id) AS ads, first_active_year,country_id FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE first_active_year=2021 AND skill!='' GROUP BY first_active_year,country_id LIMIT 1")
+write.csv(total_ads_year_country, "total_ads_year_country.csv")
+
+# by country and year, including ads with missing skills
+
+total_all_ads_year <- get_data("SELECT COUNT(DISTINCT oja_id) AS ads, first_active_year FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE first_active_year=2021 GROUP BY first_active_year LIMIT 1")
+write.csv(total_all_ads_year, "total_all_ads_year.csv")
+total_all_ads_year_country <- get_data("SELECT COUNT(DISTINCT oja_id) AS ads, first_active_year,country_id FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE first_active_year=2021 GROUP BY first_active_year,country_id LIMIT 1")
+write.csv(total_all_ads_year_country, "total_all_ads_year_country.csv")
+
+
+### tables for distribution or panel analysis over cells
+
+# breakdowns, isco2d
+all_breakdowns <- get_data("SELECT skill, country_id, occupation2d_id, first_active_year, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2019 OR first_active_year=2020 OR first_active_year=2021) AND skill_hier1_id='http://data.europa.eu/esco/skill/L1' GROUP BY skill, country_id, occupation2d_id, first_active_year ORDER BY skill, country_id, occupation2d_id, first_active_year LIMIT 10000000")
+tot_breakdowns <- get_data("SELECT 'Total' AS skill, country_id, occupation2d_id, first_active_year, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2019 OR first_active_year=2020 OR first_active_year=2021) GROUP BY country_id, occupation2d_id, first_active_year ORDER BY country_id, occupation2d_id, first_active_year LIMIT 10000000")
+dim(all_breakdowns)
+dim(tot_breakdowns)
+breakdowns2d <- rbind(tot_breakdowns, all_breakdowns)
+write.csv(breakdowns2d, "breakdowns2d.csv")
+
+# breakdowns, isco3d
+all_breakdowns <- get_data("SELECT skill, country_id, occupation3d_id, first_active_year, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2019 OR first_active_year=2020 OR first_active_year=2021) AND skill_hier1_id='http://data.europa.eu/esco/skill/L1' GROUP BY skill, country_id, occupation3d_id, first_active_year ORDER BY skill, country_id, occupation3d_id, first_active_year LIMIT 10000000")
+tot_breakdowns <- get_data("SELECT 'Total' AS skill, country_id, occupation3d_id, first_active_year, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2019 OR first_active_year=2020 OR first_active_year=2021) GROUP BY country_id, occupation3d_id, first_active_year ORDER BY country_id, occupation3d_id, first_active_year LIMIT 10000000")
+dim(all_breakdowns)
+dim(tot_breakdowns)
+breakdowns3d <- rbind(tot_breakdowns, all_breakdowns)
+write.csv(breakdowns3d, "breakdowns3d.csv")
+
+# breakdowns, isco2d, nuts3, month, language skill
+tot_breakdowns     <- get_data("SELECT occupation2d_id, nuts3_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 GROUP BY occupation2d_id, nuts3_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts3_id, first_active_month, first_active_year LIMIT 10000000")
+noskill_breakdowns <- get_data("SELECT occupation2d_id, nuts3_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS withoutskill FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill!='' GROUP BY occupation2d_id, nuts3_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts3_id, first_active_month, first_active_year LIMIT 10000000")
+atleast1_breakdowns <- get_data("SELECT occupation2d_id, nuts3_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS atleast1fl FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill_hier1_id='http://data.europa.eu/esco/skill/L1' GROUP BY occupation2d_id, nuts3_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts3_id, first_active_month, first_active_year LIMIT 10000000")
+english_breakdowns <- get_data("SELECT occupation2d_id, nuts3_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS english FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='English' GROUP BY occupation2d_id, nuts3_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts3_id, first_active_month, first_active_year LIMIT 10000000")
+german_breakdowns <- get_data("SELECT occupation2d_id, nuts3_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS german FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='German' GROUP BY occupation2d_id, nuts3_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts3_id, first_active_month, first_active_year LIMIT 10000000")
+chinese_breakdowns <- get_data("SELECT occupation2d_id, nuts3_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS chinese FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='Chinese' GROUP BY occupation2d_id, nuts3_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts3_id, first_active_month, first_active_year LIMIT 10000000")
+french_breakdowns <- get_data("SELECT occupation2d_id, nuts3_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS french FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='French' GROUP BY occupation2d_id, nuts3_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts3_id, first_active_month, first_active_year LIMIT 10000000")
+spanish_breakdowns <- get_data("SELECT occupation2d_id, nuts3_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS spanish FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='Spanish' GROUP BY occupation2d_id, nuts3_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts3_id, first_active_month, first_active_year LIMIT 10000000")
+
+
+panel <- merge(tot_breakdowns, noskill_breakdowns, by=c("occupation2d_id", "nuts3_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, atleast1_breakdowns, by=c("occupation2d_id", "nuts3_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, english_breakdowns, by=c("occupation2d_id", "nuts3_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, german_breakdowns, by=c("occupation2d_id", "nuts3_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, chinese_breakdowns, by=c("occupation2d_id", "nuts3_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, french_breakdowns, by=c("occupation2d_id", "nuts3_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, spanish_breakdowns, by=c("occupation2d_id", "nuts3_id", "first_active_month", "first_active_year"), all = T)
+
+write.csv(panel, "panel_nuts3.csv")
+
+# breakdowns, isco2d, nuts2, month, language skill
+tot_breakdowns     <- get_data("SELECT occupation2d_id, nuts2_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 GROUP BY occupation2d_id, nuts2_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts2_id, first_active_month, first_active_year LIMIT 10000000")
+noskill_breakdowns <- get_data("SELECT occupation2d_id, nuts2_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS withoutskill FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill!='' GROUP BY occupation2d_id, nuts2_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts2_id, first_active_month, first_active_year LIMIT 10000000")
+atleast1_breakdowns <- get_data("SELECT occupation2d_id, nuts2_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS atleast1fl FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill_hier1_id='http://data.europa.eu/esco/skill/L1' GROUP BY occupation2d_id, nuts2_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts2_id, first_active_month, first_active_year LIMIT 10000000")
+english_breakdowns <- get_data("SELECT occupation2d_id, nuts2_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS english FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='English' GROUP BY occupation2d_id, nuts2_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts2_id, first_active_month, first_active_year LIMIT 10000000")
+german_breakdowns <- get_data("SELECT occupation2d_id, nuts2_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS german FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='German' GROUP BY occupation2d_id, nuts2_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts2_id, first_active_month, first_active_year LIMIT 10000000")
+chinese_breakdowns <- get_data("SELECT occupation2d_id, nuts2_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS chinese FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='Chinese' GROUP BY occupation2d_id, nuts2_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts2_id, first_active_month, first_active_year LIMIT 10000000")
+french_breakdowns <- get_data("SELECT occupation2d_id, nuts2_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS french FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='French' GROUP BY occupation2d_id, nuts2_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts2_id, first_active_month, first_active_year LIMIT 10000000")
+spanish_breakdowns <- get_data("SELECT occupation2d_id, nuts2_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS spanish FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='Spanish' GROUP BY occupation2d_id, nuts2_id, first_active_month, first_active_year ORDER BY occupation2d_id, nuts2_id, first_active_month, first_active_year LIMIT 10000000")
+
+
+panel <- merge(tot_breakdowns, noskill_breakdowns, by=c("occupation2d_id", "nuts2_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, atleast1_breakdowns, by=c("occupation2d_id", "nuts2_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, english_breakdowns, by=c("occupation2d_id", "nuts2_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, german_breakdowns, by=c("occupation2d_id", "nuts2_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, chinese_breakdowns, by=c("occupation2d_id", "nuts2_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, french_breakdowns, by=c("occupation2d_id", "nuts2_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, spanish_breakdowns, by=c("occupation2d_id", "nuts2_id", "first_active_month", "first_active_year"), all = T)
+
+write.csv(panel, "panel_nuts2.csv")
+
+# breakdowns, isco2d, country, month, language skill
+tot_breakdowns     <- get_data("SELECT occupation2d_id, country_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS ads FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 GROUP BY occupation2d_id, country_id, first_active_month, first_active_year ORDER BY occupation2d_id, country_id, first_active_month, first_active_year LIMIT 10000000")
+noskill_breakdowns <- get_data("SELECT occupation2d_id, country_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS withoutskill FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill!='' GROUP BY occupation2d_id, country_id, first_active_month, first_active_year ORDER BY occupation2d_id, country_id, first_active_month, first_active_year LIMIT 10000000")
+atleast1_breakdowns <- get_data("SELECT occupation2d_id, country_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS atleast1fl FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill_hier1_id='http://data.europa.eu/esco/skill/L1' GROUP BY occupation2d_id, country_id, first_active_month, first_active_year ORDER BY occupation2d_id, country_id, first_active_month, first_active_year LIMIT 10000000")
+english_breakdowns <- get_data("SELECT occupation2d_id, country_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS english FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='English' GROUP BY occupation2d_id, country_id, first_active_month, first_active_year ORDER BY occupation2d_id, country_id, first_active_month, first_active_year LIMIT 10000000")
+german_breakdowns <- get_data("SELECT occupation2d_id, country_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS german FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='German' GROUP BY occupation2d_id, country_id, first_active_month, first_active_year ORDER BY occupation2d_id, country_id, first_active_month, first_active_year LIMIT 10000000")
+chinese_breakdowns <- get_data("SELECT occupation2d_id, country_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS chinese FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='Chinese' GROUP BY occupation2d_id, country_id, first_active_month, first_active_year ORDER BY occupation2d_id, country_id, first_active_month, first_active_year LIMIT 10000000")
+french_breakdowns <- get_data("SELECT occupation2d_id, country_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS french FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='French' GROUP BY occupation2d_id, country_id, first_active_month, first_active_year ORDER BY occupation2d_id, country_id, first_active_month, first_active_year LIMIT 10000000")
+spanish_breakdowns <- get_data("SELECT occupation2d_id, country_id, first_active_month, first_active_year, COUNT(DISTINCT oja_id) AS spanish FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill='Spanish' GROUP BY occupation2d_id, country_id, first_active_month, first_active_year ORDER BY occupation2d_id, country_id, first_active_month, first_active_year LIMIT 10000000")
+
+
+panel <- merge(tot_breakdowns, noskill_breakdowns, by=c("occupation2d_id", "country_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, atleast1_breakdowns, by=c("occupation2d_id", "country_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, english_breakdowns, by=c("occupation2d_id", "country_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, german_breakdowns, by=c("occupation2d_id", "country_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, chinese_breakdowns, by=c("occupation2d_id", "country_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, french_breakdowns, by=c("occupation2d_id", "country_id", "first_active_month", "first_active_year"), all = T)
+panel <- merge(panel, spanish_breakdowns, by=c("occupation2d_id", "country_id", "first_active_month", "first_active_year"), all = T)
+
+write.csv(panel, "panel_country.csv")
 

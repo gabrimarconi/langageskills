@@ -1,5 +1,6 @@
 
 
+### NB: the oecd wp version is at: ### English, german, chinese and other fls - light
 
 source("libraries.R")
 source("libraries_eurostat.R")
@@ -486,7 +487,7 @@ write.csv(Ns, paste0("Ns_",depvar,"_engech.csv"))
 
 
 ###################################################################################
-### English, german, chinese and other fls - light
+### English, german, chinese and other fls - light (oecd wp version)
 ###################################################################################
 
 
@@ -657,3 +658,366 @@ Ndata <- get_data(Ndata_query)
 missing <- data.frame(Ntotal = Ntotl$Ntotal, Nwithdata = Ndata$Nwithdata, missing=1-Ndata$Nwithdata/Ntotl$Ntotal)
 write.csv(missing, paste0("missing_",depvar,"_4lang.csv"))
   
+
+
+###################################################################################
+### English, german, chinese and other fls - light detailed (oecd WP extended, just-in-case version)
+###################################################################################
+
+
+# with nuts3, isco2
+
+
+# select depvar
+depvar <- "contract_id"
+depvar <- "salary_id"
+
+# filter for any language other than English
+chinese <- " (skill='Chinese') "
+german <- " (skill='German') "
+otherfl <- " (skill='Spanish' OR skill='French' OR skill='Basque' OR skill='Dutch' OR skill='Arabic' OR skill='Finnish' OR skill='Italian' OR skill='Polish' OR skill='Welsh' OR skill='Norwegian' OR skill='Swedish' OR skill='Latvian' OR skill='Russian' OR skill='Czech' OR skill='Danish' OR skill='Hungarian' OR skill='Greek' OR skill='Icelandic' OR skill='Slovak' OR skill='Croatian' OR skill='Turkish' OR skill='Romanian' OR skill='Slovenian' OR skill='Bulgarian' OR skill='Bihari' OR skill='Portuguese' OR skill='Maltese') "
+
+
+# other filters as relevant
+if (depvar=="salary_id") {filter0 <- paste0(depvar,"!='' AND ")} else {filter0 <- ""}
+filters_list <- paste0(filter0," nuts3_id!='' AND occupation1d_id!='OC6' AND economic_activity1d_id!='' AND economic_activity1d_id!='A' AND working_time_id!='PT'")
+#filters_list <- paste0("nuts2_id!='' AND occupation1d_id!='OC6' AND economic_activity1d_id!='' AND economic_activity1d_id!='A' AND working_time_id!='PT'")
+
+
+table0 <- paste0("SELECT DISTINCT oja_id, nuts3_id, country_id, language, occupation4d_id, economic_activity1d_id, experience_id, education_id, first_active_date, ",depvar," FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 OR first_active_year=2020 OR first_active_year=2019) AND ",filters_list)
+list_en <- paste0("SELECT DISTINCT oja_id, 1 AS english FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 OR first_active_year=2020 OR first_active_year=2019) AND skill ='English' AND ",filters_list)
+list_ne <- paste0("SELECT DISTINCT oja_id FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 OR first_active_year=2020 OR first_active_year=2019) AND skill!='English' AND ",filters_list)
+list_ge <- paste0("SELECT DISTINCT oja_id, 1 AS german FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 OR first_active_year=2020 OR first_active_year=2019) AND     ",german ,"  AND ",filters_list)
+list_ng <- paste0("SELECT DISTINCT oja_id FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 OR first_active_year=2020 OR first_active_year=2019) AND NOT ",german ,"  AND ",filters_list)
+list_ch <- paste0("SELECT DISTINCT oja_id, 1 AS chinese FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 OR first_active_year=2020 OR first_active_year=2019) AND     ",chinese,"  AND ",filters_list)
+list_nc <- paste0("SELECT DISTINCT oja_id FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 OR first_active_year=2020 OR first_active_year=2019) AND NOT ",chinese,"  AND ",filters_list)
+list_th <- paste0("SELECT DISTINCT oja_id, 1 AS otherfl FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 OR first_active_year=2020 OR first_active_year=2019) AND     ",otherfl ," AND ",filters_list)
+list_nt <- paste0("SELECT DISTINCT oja_id FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 OR first_active_year=2020 OR first_active_year=2019) AND NOT ",otherfl ," AND ",filters_list)
+list_NS <- paste0("SELECT oja_id, COUNT(DISTINCT skill) AS N_skills FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 OR first_active_year=2020 OR first_active_year=2019) AND ",filters_list, " GROUP BY oja_id")
+
+
+#test1 <- get_data(paste0(table1, " "))
+#test2 <- get_data(paste0(list_NS, " LIMIT 100"))
+
+
+
+# crosstab_main
+
+joinquery <- paste0(
+  "WITH list_en AS (",list_en,"),
+        list_ne AS (",list_ne,"),
+        list_ge AS (",list_ge,"),
+        list_ng AS (",list_ng,"),
+        list_ch AS (",list_ch,"),
+        list_nc AS (",list_nc,"),
+        list_th AS (",list_th,"),
+        list_nt AS (",list_nt,"),
+        list_NS AS (",list_NS,"),
+        table0  AS (",table0,")
+  SELECT oja_id, english, german, chinese, otherfl, N_skills, nuts3_id, country_id, language, occupation4d_id, economic_activity1d_id, experience_id, education_id, first_active_date, ",depvar,", 'main' AS datatable FROM table0 LEFT JOIN list_en USING(oja_id) LEFT JOIN list_ge USING(oja_id) LEFT JOIN list_ch USING(oja_id) LEFT JOIN list_th USING(oja_id) LEFT JOIN list_NS USING(oja_id) ORDER BY RAND() LIMIT 1500000"  )
+crosstab <- get_data(joinquery)
+dim(crosstab)
+crosstab <- crosstab[crosstab$nuts3_id!='',]
+dim(crosstab)
+crosstab <- crosstab[!duplicated(oja_id),]
+crosstab_main <- crosstab
+dim(crosstab_main)
+
+# crosstab_german
+
+joinquery <- paste0(
+  "WITH list_en AS (",list_en,"),
+        list_ne AS (",list_ne,"),
+        list_ge AS (",list_ge,"),
+        list_ng AS (",list_ng,"),
+        list_ch AS (",list_ch,"),
+        list_nc AS (",list_nc,"),
+        list_th AS (",list_th,"),
+        list_nt AS (",list_nt,"),
+        list_NS AS (",list_NS,"),
+        table0  AS (",table0,")
+  SELECT oja_id, english, german, chinese, otherfl, N_skills, nuts3_id, country_id, language, occupation4d_id, economic_activity1d_id, experience_id, education_id, first_active_date, ",depvar,", 'german' AS datatable FROM table0 LEFT JOIN list_en USING(oja_id) LEFT JOIN list_ge USING(oja_id) LEFT JOIN list_ch USING(oja_id) LEFT JOIN list_th USING(oja_id) LEFT JOIN list_NS USING(oja_id) WHERE german=1 ORDER BY RAND() LIMIT 100000"  )
+crosstab <- get_data(joinquery)
+dim(crosstab)
+crosstab <- crosstab[crosstab$nuts3_id!='',]
+dim(crosstab)
+crosstab <- crosstab[!duplicated(oja_id),]
+crosstab_german <- crosstab
+dim(crosstab_german)
+
+
+# crosstab_chinese
+
+joinquery <- paste0(
+  "WITH list_en AS (",list_en,"),
+        list_ne AS (",list_ne,"),
+        list_ge AS (",list_ge,"),
+        list_ng AS (",list_ng,"),
+        list_ch AS (",list_ch,"),
+        list_nc AS (",list_nc,"),
+        list_th AS (",list_th,"),
+        list_nt AS (",list_nt,"),
+        list_NS AS (",list_NS,"),
+        table0  AS (",table0,")
+  SELECT oja_id, english, german, chinese, otherfl, N_skills, nuts3_id, country_id, language, occupation4d_id, economic_activity1d_id, experience_id, education_id, first_active_date, ",depvar,", 'chinese' AS datatable FROM table0 LEFT JOIN list_en USING(oja_id) LEFT JOIN list_ge USING(oja_id) LEFT JOIN list_ch USING(oja_id) LEFT JOIN list_th USING(oja_id) LEFT JOIN list_NS USING(oja_id) WHERE chinese=1 ORDER BY RAND() LIMIT 100000"  )
+crosstab <- get_data(joinquery)
+dim(crosstab)
+crosstab <- crosstab[crosstab$nuts3_id!='',]
+dim(crosstab)
+crosstab <- crosstab[!duplicated(oja_id),]
+dim(crosstab)
+crosstab_chinese <- crosstab
+dim(crosstab_chinese)
+
+# crosstab_otherfl
+
+joinquery <- paste0(
+  "WITH list_en AS (",list_en,"),
+        list_ne AS (",list_ne,"),
+        list_ge AS (",list_ge,"),
+        list_ng AS (",list_ng,"),
+        list_ch AS (",list_ch,"),
+        list_nc AS (",list_nc,"),
+        list_th AS (",list_th,"),
+        list_nt AS (",list_nt,"),
+        list_NS AS (",list_NS,"),
+        table0  AS (",table0,")
+  SELECT oja_id, english, german, chinese, otherfl, N_skills, nuts3_id, country_id, language, occupation4d_id, economic_activity1d_id, experience_id, education_id, first_active_date, ",depvar,", 'otherfl' AS datatable FROM table0 LEFT JOIN list_en USING(oja_id) LEFT JOIN list_ge USING(oja_id) LEFT JOIN list_ch USING(oja_id) LEFT JOIN list_th USING(oja_id) LEFT JOIN list_NS USING(oja_id) WHERE otherfl=1 ORDER BY RAND() LIMIT 100000"  )
+crosstab <- get_data(joinquery)
+dim(crosstab)
+crosstab <- crosstab[crosstab$nuts3_id!='',]
+dim(crosstab)
+crosstab <- crosstab[!duplicated(oja_id),]
+crosstab_otherfl <- crosstab
+dim(crosstab_otherfl)
+
+# crosstab_english
+
+joinquery <- paste0(
+  "WITH list_en AS (",list_en,"),
+        list_ne AS (",list_ne,"),
+        list_ge AS (",list_ge,"),
+        list_ng AS (",list_ng,"),
+        list_ch AS (",list_ch,"),
+        list_nc AS (",list_nc,"),
+        list_th AS (",list_th,"),
+        list_nt AS (",list_nt,"),
+        list_NS AS (",list_NS,"),
+        table0  AS (",table0,")
+  SELECT oja_id, english, german, chinese, otherfl, N_skills, nuts3_id, country_id, language, occupation4d_id, economic_activity1d_id, experience_id, education_id, first_active_date, ",depvar,", 'english' AS datatable FROM table0 LEFT JOIN list_en USING(oja_id) LEFT JOIN list_ge USING(oja_id) LEFT JOIN list_ch USING(oja_id) LEFT JOIN list_th USING(oja_id) LEFT JOIN list_NS USING(oja_id) WHERE english=1 ORDER BY RAND() LIMIT 200000"  )
+crosstab <- get_data(joinquery)
+dim(crosstab)
+crosstab <- crosstab[crosstab$nuts3_id!='',]
+dim(crosstab)
+crosstab <- crosstab[!duplicated(oja_id),]
+crosstab_english <- crosstab
+dim(crosstab_english)
+
+# crosstab
+crosstab <- crosstab_main
+crosstab <- rbind(crosstab, crosstab_german)
+crosstab <- rbind(crosstab, crosstab_chinese)
+crosstab <- rbind(crosstab, crosstab_otherfl)
+crosstab <- rbind(crosstab, crosstab_english)
+dim(crosstab)
+saveRDS(crosstab, paste0("regsample_",depvar,"_withdup_4lang_detailed.rds"))
+crosstab <- crosstab[crosstab$nuts3_id!='',]
+dim(crosstab)
+crosstab <- crosstab[!duplicated(oja_id),]
+dim(crosstab)
+write.csv(crosstab, paste0("regsample_",depvar,"_4lang_detailed.csv"))
+
+# sample size and missing data
+
+Ns_query <- paste0("SELECT COUNT (DISTINCT oja_id), skill FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 OR first_active_year=2020 OR first_active_year=2019) AND (skill='english' OR ",german," OR ",chinese,"  OR ",otherfl,") AND ",filters_list, " GROUP BY skill LIMIT 1000")
+Ns <- get_data(Ns_query)
+Ns
+write.csv(Ns, paste0("Ns_",depvar,"_4lang_detailed.csv"))
+
+Ntotl_query <- paste0("SELECT COUNT (DISTINCT oja_id) AS Ntotal    FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 OR first_active_year=2020 OR first_active_year=2019) LIMIT 1000")
+Ndata_query <- paste0("SELECT COUNT (DISTINCT oja_id) AS Nwithdata FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE (first_active_year=2021 OR first_active_year=2020 OR first_active_year=2019) AND ",filters_list, " LIMIT 1000")
+Ntotl <- get_data(Ntotl_query)
+Ndata <- get_data(Ndata_query)
+missing <- data.frame(Ntotal = Ntotl$Ntotal, Nwithdata = Ndata$Nwithdata, missing=1-Ndata$Nwithdata/Ntotl$Ntotal)
+write.csv(missing, paste0("missing_",depvar,"_4lang_detailed.csv"))
+
+
+
+
+
+
+
+
+
+
+
+###################################################################################
+### English, german, chinese and other fls - light (eurostat wp version)
+###################################################################################
+
+
+
+
+
+# filter for any language other than English
+chinese <- " (skill='Chinese') "
+german <- " (skill='German') "
+otherfl <- " (skill='Spanish' OR skill='French' OR skill='Basque' OR skill='Dutch' OR skill='Arabic' OR skill='Finnish' OR skill='Italian' OR skill='Polish' OR skill='Welsh' OR skill='Norwegian' OR skill='Swedish' OR skill='Latvian' OR skill='Russian' OR skill='Czech' OR skill='Danish' OR skill='Hungarian' OR skill='Greek' OR skill='Icelandic' OR skill='Slovak' OR skill='Croatian' OR skill='Turkish' OR skill='Romanian' OR skill='Slovenian' OR skill='Bulgarian' OR skill='Bihari' OR skill='Portuguese' OR skill='Maltese') "
+
+
+
+table0 <- paste0("SELECT DISTINCT oja_id, nuts3_id, nuts2_id, first_active_date, language, occupation4d_id, economic_activity1d_id, experience_id, contract_id, salary_id, education_id, working_time_id FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE nuts2_id!='' AND first_active_year=2022  AND first_active_month=1")
+list_en <- paste0("SELECT DISTINCT oja_id, 1 AS english FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE skill ='English'  AND nuts2_id!='' AND first_active_year=2022 AND first_active_month=1")
+list_ge <- paste0("SELECT DISTINCT oja_id, 1 AS german FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE    ",german ," AND nuts2_id!='' AND first_active_year=2022 AND first_active_month=1")
+list_ch <- paste0("SELECT DISTINCT oja_id, 1 AS chinese FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE    ",chinese,"  AND nuts2_id!='' AND first_active_year=2022 AND first_active_month=1")
+list_th <- paste0("SELECT DISTINCT oja_id, 1 AS otherfl FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2022q4_r20230130 WHERE    ",otherfl ," AND nuts2_id!='' AND first_active_year=2022 AND first_active_month=1")
+
+test0 <- get_data(paste0(table0, " LIMIT 100"))
+test1 <- get_data(paste0(list_en, " LIMIT 100"))
+test2 <- get_data(paste0(list_ge, " LIMIT 100"))
+test3 <- get_data(paste0(list_ch, " LIMIT 100"))
+test4 <- get_data(paste0(list_th, " LIMIT 100"))
+ttest0 <- paste0(table0, " LIMIT 1000000000")
+ttest1 <- paste0(list_en, " LIMIT 1000000000")
+ttest2 <- paste0(list_ge, " LIMIT 1000000000")
+ttest3 <- paste0(list_ch, " LIMIT 1000000000")
+ttest4 <- paste0(list_th, " LIMIT 1000000000")
+testquery <- paste0(
+  "WITH list_en AS (",ttest1,"),
+        list_ge AS (",ttest2,"),
+        list_ch AS (",ttest3,"),
+        list_th AS (",ttest4,"),
+        table0  AS (",ttest0,")
+  SELECT oja_id, english, german, chinese, otherfl, nuts3_id, nuts2_id, first_active_date, language, occupation4d_id, economic_activity1d_id, experience_id, contract_id, salary_id, education_id, working_time_id, 'main' AS datatable FROM table0 LEFT JOIN list_en USING(oja_id) LEFT JOIN list_ge USING(oja_id) LEFT JOIN list_ch USING(oja_id) LEFT JOIN list_th USING(oja_id) ORDER BY RAND() LIMIT 15"  )
+crosstab <- get_data(testquery)
+
+
+# crosstab_main
+
+joinquery <- paste0(
+  "WITH list_en AS (",list_en," ),
+        list_ge AS (",list_ge," ),
+        list_ch AS (",list_ch," ),
+        list_th AS (",list_th," ),
+        table0  AS (",table0," )
+  SELECT oja_id, english, german, chinese, otherfl, nuts3_id, nuts2_id, first_active_date, language, occupation4d_id, economic_activity1d_id, experience_id, contract_id, salary_id, education_id, working_time_id, 'main' AS datatable FROM table0 LEFT JOIN list_en USING(oja_id) LEFT JOIN list_ge USING(oja_id) LEFT JOIN list_ch USING(oja_id) LEFT JOIN list_th USING(oja_id) ORDER BY RAND() LIMIT 15"  )
+crosstab <- get_data(joinquery)
+dim(crosstab)
+crosstab <- crosstab[crosstab$nuts2_id!='',]
+dim(crosstab)
+crosstab <- crosstab[!duplicated(oja_id),]
+crosstab_main <- crosstab
+dim(crosstab_main)
+
+# crosstab_german
+
+testquery <- paste0(
+  "WITH list_en AS (",ttest1,"),
+        list_ge AS (",ttest2,"),
+        list_ch AS (",ttest3,"),
+        list_th AS (",ttest4,"),
+        table0  AS (",ttest0,")
+  SELECT oja_id, english, german, chinese, otherfl, nuts3_id, nuts2_id, language, occupation4d_id, economic_activity1d_id, experience_id, contract_id, salary_id, education_id, working_time_id, 'german' AS datatable FROM ttest0 LEFT JOIN ttest1 USING(oja_id) LEFT JOIN ttest2 USING(oja_id) LEFT JOIN ttest3 USING(oja_id) LEFT JOIN ttest4 USING(oja_id) WHERE german=1 ORDER BY RAND() LIMIT 15"  )
+crosstab <- get_data(testquery)
+dim(crosstab)
+crosstab <- crosstab[crosstab$nuts2_id!='',]
+dim(crosstab)
+crosstab <- crosstab[!duplicated(oja_id),]
+crosstab_german <- crosstab
+dim(crosstab_german)
+
+
+# crosstab_chinese
+
+joinquery <- paste0(
+  "WITH list_en AS (",list_en,"),
+        list_ne AS (",list_ne,"),
+        list_ge AS (",list_ge,"),
+        list_ng AS (",list_ng,"),
+        list_ch AS (",list_ch,"),
+        list_nc AS (",list_nc,"),
+        list_th AS (",list_th,"),
+        list_nt AS (",list_nt,"),
+        table0  AS (",table0,")
+  SELECT oja_id, english, german, chinese, otherfl, nuts3_id, nuts2_id, language, occupation4d_id, economic_activity1d_id, experience_id, contract_id, salary_id, education_id, working_time_id, 'chinese' AS datatable FROM table0 LEFT JOIN list_en USING(oja_id) LEFT JOIN list_ge USING(oja_id) LEFT JOIN list_ch USING(oja_id) LEFT JOIN list_th USING(oja_id) WHERE chinese=1 ORDER BY RAND() LIMIT 100000"  )
+crosstab <- get_data(joinquery)
+dim(crosstab)
+crosstab <- crosstab[crosstab$nuts2_id!='',]
+dim(crosstab)
+crosstab <- crosstab[!duplicated(oja_id),]
+dim(crosstab)
+crosstab_chinese <- crosstab
+dim(crosstab_chinese)
+
+# crosstab_otherfl
+
+joinquery <- paste0(
+  "WITH list_en AS (",list_en,"),
+        list_ne AS (",list_ne,"),
+        list_ge AS (",list_ge,"),
+        list_ng AS (",list_ng,"),
+        list_ch AS (",list_ch,"),
+        list_nc AS (",list_nc,"),
+        list_th AS (",list_th,"),
+        list_nt AS (",list_nt,"),
+        table0  AS (",table0,")
+  SELECT oja_id, english, german, chinese, otherfl, nuts3_id, nuts2_id, language, occupation4d_id, economic_activity1d_id, experience_id, contract_id, salary_id, education_id, working_time_id, 'otherfl' AS datatable FROM table0 LEFT JOIN list_en USING(oja_id) LEFT JOIN list_ge USING(oja_id) LEFT JOIN list_ch USING(oja_id) LEFT JOIN list_th USING(oja_id) WHERE otherfl=1 ORDER BY RAND() LIMIT 100000"  )
+crosstab <- get_data(joinquery)
+dim(crosstab)
+crosstab <- crosstab[crosstab$nuts2_id!='',]
+dim(crosstab)
+crosstab <- crosstab[!duplicated(oja_id),]
+crosstab_otherfl <- crosstab
+dim(crosstab_otherfl)
+
+# crosstab_english
+
+joinquery <- paste0(
+  "WITH list_en AS (",list_en,"),
+        list_ne AS (",list_ne,"),
+        list_ge AS (",list_ge,"),
+        list_ng AS (",list_ng,"),
+        list_ch AS (",list_ch,"),
+        list_nc AS (",list_nc,"),
+        list_th AS (",list_th,"),
+        list_nt AS (",list_nt,"),
+        table0  AS (",table0,")
+  SELECT oja_id, english, german, chinese, otherfl, nuts3_id, nuts2_id, language, occupation4d_id, economic_activity1d_id, experience_id, contract_id, salary_id, education_id, working_time_id, 'english' AS datatable FROM table0 LEFT JOIN list_en USING(oja_id) LEFT JOIN list_ge USING(oja_id) LEFT JOIN list_ch USING(oja_id) LEFT JOIN list_th USING(oja_id) WHERE english=1 ORDER BY RAND() LIMIT 100000"  )
+crosstab <- get_data(joinquery)
+dim(crosstab)
+crosstab <- crosstab[crosstab$nuts2_id!='',]
+dim(crosstab)
+crosstab <- crosstab[!duplicated(oja_id),]
+crosstab_english <- crosstab
+dim(crosstab_english)
+
+# crosstab
+crosstab <- crosstab_main
+crosstab <- rbind(crosstab, crosstab_german)
+crosstab <- rbind(crosstab, crosstab_chinese)
+crosstab <- rbind(crosstab, crosstab_otherfl)
+crosstab <- rbind(crosstab, crosstab_english)
+dim(crosstab)
+saveRDS(crosstab, paste0("regsample_",depvar,"_withdup_4lang.rds"))
+crosstab <- crosstab[crosstab$nuts2_id!='',]
+dim(crosstab)
+crosstab <- crosstab[!duplicated(oja_id),]
+dim(crosstab)
+write.csv(crosstab, paste0("regsample_",depvar,"_4lang.csv"))
+
+Ns_query <- paste0("SELECT COUNT (DISTINCT oja_id), skill FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2021 AND (skill='english' OR ",german," OR ",chinese,"  OR ",otherfl,") AND ",filters_list, " GROUP BY skill LIMIT 1000")
+Ns <- get_data(Ns_query)
+Ns
+write.csv(Ns, paste0("Ns_",depvar,"_4lang.csv"))
+
+Ntotl_query <- paste0("SELECT COUNT (DISTINCT oja_id) AS Ntotal    FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2021 LIMIT 1000")
+Ndata_query <- paste0("SELECT COUNT (DISTINCT oja_id) AS Nwithdata FROM WIHAccessCatalog.wih_oja_versioned.wih_oja_blended_v1_2021q4_r20220224 WHERE first_active_year=2021 AND ",filters_list, " LIMIT 1000")
+Ntotl <- get_data(Ntotl_query)
+Ndata <- get_data(Ndata_query)
+missing <- data.frame(Ntotal = Ntotl$Ntotal, Nwithdata = Ndata$Nwithdata, missing=1-Ndata$Nwithdata/Ntotl$Ntotal)
+write.csv(missing, paste0("missing_",depvar,"_4lang.csv"))
+
+
+
+
+
