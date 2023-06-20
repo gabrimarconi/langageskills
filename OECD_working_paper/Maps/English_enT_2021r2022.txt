@@ -1,0 +1,9 @@
+
+Not in the map:  Região Autónoma dos Açores 0.19, Região Autónoma da Madeira 0.15, El Hierro 0.12
+  Fuerteventura 0.17, Gran Canaria 0.14, La Gomera 0.02, La Palma 0.11, Lanzarote 0.09
+  Tenerife 0.17, Guadeloupe 0.38, Martinique 0.37, Guyane 0.37, La Réunion 0.4, Mayotte 0.36
+
+The following six regions have been excluded because of insufficient data (number of ads < 100): Weiden i. d. Opf, Brandenburg an der Havel, Oldenburg (Oldenburg), Λευκάδα (Lefkada), Φωκίδα (Fokida), Isle of Anglesey
+
+(C) EuroGeographics for the administrative boundaries 
+ Map produced in R with a help from Eurostat-package <github.com/ropengov/eurostat/>

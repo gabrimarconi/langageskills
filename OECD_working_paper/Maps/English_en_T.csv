@@ -1,0 +1,1343 @@
+,nuts3_id,nuts3,country_id,prop,catprop
+1,UKD35,Greater Manchester South East,UK,1,>0.7
+2,UKD41,Blackburn with Darwen,UK,1,>0.7
+3,UKD72,Liverpool,UK,1,>0.7
+4,UKH35,West Essex,UK,1,>0.7
+5,UKI41,Hackney and Newham,UK,1,>0.7
+6,UKI52,Barking & Dagenham and Havering,UK,1,>0.7
+7,UKJ34,Isle of Wight,UK,1,>0.7
+8,UKJ35,South Hampshire,UK,1,>0.7
+9,UKK42,Torbay,UK,1,>0.7
+10,UKL11,Isle of Anglesey,UK,1,>0.7
+11,UKM21,Angus and Dundee City,UK,1,>0.7
+12,UKM37,South Ayrshire,UK,1,>0.7
+13,UKD74,Wirral,UK,0.999978812,>0.7
+14,UKI32,Westminster,UK,0.9999283,>0.7
+15,UKH24,Bedford,UK,0.999926514,>0.7
+16,UKE42,Leeds,UK,0.999919562,>0.7
+17,UKD62,Cheshire East,UK,0.999898687,>0.7
+18,UKH12,Cambridgeshire CC,UK,0.999885416,>0.7
+19,UKH31,Southend-on-Sea,UK,0.999877958,>0.7
+20,UKJ31,Portsmouth,UK,0.999859303,>0.7
+21,UKJ46,West Kent,UK,0.999850184,>0.7
+22,UKJ26,East Surrey,UK,0.99984759,>0.7
+23,UKJ11,Berkshire,UK,0.999804586,>0.7
+24,UKE32,Sheffield,UK,0.999802768,>0.7
+25,UKM27,Perth & Kinross and Stirling,UK,0.999779661,>0.7
+26,UKG38,Walsall,UK,0.999778871,>0.7
+27,UKD45,Mid Lancashire,UK,0.999769054,>0.7
+28,UKC23,Sunderland,UK,0.999767622,>0.7
+29,UKE44,Calderdale and Kirklees,UK,0.999764893,>0.7
+30,UKG22,Shropshire CC,UK,0.999758897,>0.7
+31,UKM28,West Lothian,UK,0.999710921,>0.7
+32,UKD47,Chorley and West Lancashire,UK,0.999687238,>0.7
+33,UKE45,Wakefield,UK,0.999670592,>0.7
+34,UKL17,Bridgend and Neath Port Talbot,UK,0.999663109,>0.7
+35,UKJ12,Milton Keynes,UK,0.999649213,>0.7
+36,UKI62,Croydon,UK,0.999629722,>0.7
+37,UKC13,Darlington,UK,0.999599367,>0.7
+38,UKF11,Derby,UK,0.999598122,>0.7
+39,UKH32,Thurrock,UK,0.999595449,>0.7
+40,UKE41,Bradford,UK,0.999585323,>0.7
+41,UKL15,Central Valleys,UK,0.999578283,>0.7
+42,UKI72,Brent,UK,0.999548299,>0.7
+43,UKC22,Tyneside,UK,0.999524324,>0.7
+44,UKJ14,Oxfordshire,UK,0.999520273,>0.7
+45,UKI54,Enfield,UK,0.999517743,>0.7
+46,UKM63,"Lochaber, Skye & Lochalsh, Arran & Cumbrae and Argyll & Bute",UK,0.999517614,>0.7
+47,UKG32,Solihull,UK,0.999475139,>0.7
+48,UKL12,Gwynedd,UK,0.999471936,>0.7
+49,UKL16,Gwent Valleys,UK,0.999409149,>0.7
+50,UKJ32,Southampton,UK,0.999407626,>0.7
+51,UKF14,Nottingham,UK,0.999361495,>0.7
+52,UKG37,Sandwell,UK,0.999341223,>0.7
+53,UKI34,Wandsworth,UK,0.999339746,>0.7
+54,UKH17,Breckland and South Norfolk,UK,0.999335098,>0.7
+55,UKM34,Glasgow City,UK,0.999334018,>0.7
+56,UKE11,"Kingston upon Hull, City of",UK,0.999326146,>0.7
+57,UKG33,Coventry,UK,0.999287243,>0.7
+58,UKF15,North Nottinghamshire,UK,0.999266968,>0.7
+59,UKI43,Haringey and Islington,UK,0.999261401,>0.7
+60,UKF30,Lincolnshire,UK,0.999212524,>0.7
+61,UKM23,East Lothian and Midlothian,UK,0.99914966,>0.7
+62,UKF21,Leicester,UK,0.999112614,>0.7
+63,UKD33,Manchester,UK,0.999096083,>0.7
+64,UKM25,"Edinburgh, City of",UK,0.999068458,>0.7
+65,UKK41,Plymouth,UK,0.999012154,>0.7
+66,UKG23,Stoke-on-Trent,UK,0.998958333,>0.7
+67,UKE31,"Barnsley, Doncaster and Rotherham",UK,0.998937241,>0.7
+68,UKD61,Warrington,UK,0.998908868,>0.7
+69,UKH15,Norwich and East Norfolk,UK,0.998880255,>0.7
+70,UKD34,Greater Manchester South West,UK,0.998873292,>0.7
+71,UKM66,Shetland Islands,UK,0.998844211,>0.7
+72,UKE22,North Yorkshire CC,UK,0.998832507,>0.7
+73,UKH25,Central Bedfordshire,UK,0.998827322,>0.7
+74,UKF22,Leicestershire CC and Rutland,UK,0.998814885,>0.7
+75,UKL13,Conwy and Denbighshire,UK,0.998768138,>0.7
+76,UKG12,Worcestershire,UK,0.998747063,>0.7
+77,UKK13,Gloucestershire,UK,0.998713884,>0.7
+78,UKL14,South West Wales,UK,0.998683547,>0.7
+79,UKE12,East Riding of Yorkshire,UK,0.998681088,>0.7
+80,UKK21,Bournemouth and Poole,UK,0.998626374,>0.7
+81,UKK14,Swindon,UK,0.998591101,>0.7
+82,UKI73,Ealing,UK,0.998473125,>0.7
+83,UKE13,North and North East Lincolnshire,UK,0.998195404,>0.7
+84,UKJ13,Buckinghamshire CC,UK,0.998176926,>0.7
+85,UKI61,Bromley,UK,0.998123115,>0.7
+86,UKL22,Cardiff and Vale of Glamorgan,UK,0.998087682,>0.7
+87,UKI45,Lambeth,UK,0.99807613,>0.7
+88,UKJ37,North Hampshire,UK,0.998046338,>0.7
+89,UKG36,Dudley,UK,0.998022034,>0.7
+90,UKL23,Flintshire and Wrexham,UK,0.998015266,>0.7
+91,UKC14,Durham CC,UK,0.99795926,>0.7
+92,UKD36,Greater Manchester North West,UK,0.997873549,>0.7
+93,UKM24,Scottish Borders,UK,0.997828489,>0.7
+94,UKH16,North and West Norfolk,UK,0.997796448,>0.7
+95,UKI75,Hounslow and Richmond upon Thames,UK,0.997668741,>0.7
+96,UKM65,Orkney Islands,UK,0.997660819,>0.7
+97,UKK22,Dorset CC,UK,0.997618479,>0.7
+98,UKL24,Powys,UK,0.997601127,>0.7
+99,UKD37,Greater Manchester North East,UK,0.997570547,>0.7
+100,UKK12,"Bath and North East Somerset, North Somerset and South Gloucestershire",UK,0.997509354,>0.7
+101,UKH14,Suffolk,UK,0.997451547,>0.7
+102,UKF24,West Northamptonshire,UK,0.997093345,>0.7
+103,UKF25,North Northamptonshire,UK,0.997028317,>0.7
+104,UKI42,Tower Hamlets,UK,0.996949885,>0.7
+105,UKJ43,Kent Thames Gateway,UK,0.996567798,>0.7
+106,UKJ41,Medway,UK,0.996560847,>0.7
+107,UKD42,Blackpool,UK,0.996438428,>0.7
+108,UKD46,East Lancashire,UK,0.996375638,>0.7
+109,UKE21,York,UK,0.996311752,>0.7
+110,UKD63,Cheshire West and Chester,UK,0.996264467,>0.7
+111,UKJ45,Mid Kent,UK,0.996014401,>0.7
+112,UKD12,East Cumbria,UK,0.995978764,>0.7
+113,IE021,Dublin,IE,0.995775119,>0.7
+114,UKD73,Sefton,UK,0.995745159,>0.7
+115,UKI31,Camden and City of London,UK,0.995391153,>0.7
+116,UKG39,Wolverhampton,UK,0.995129195,>0.7
+117,UKM26,Falkirk,UK,0.995095377,>0.7
+118,UKN02,Outer Belfast,UK,0.994917641,>0.7
+119,UKK15,Wiltshire CC,UK,0.994887658,>0.7
+120,UKM33,East Ayrshire and North Ayrshire mainland,UK,0.994867849,>0.7
+121,UKH11,Peterborough,UK,0.994764068,>0.7
+122,UKF13,South and West Derbyshire,UK,0.994654042,>0.7
+123,UKK11,"Bristol, City of",UK,0.994472828,>0.7
+124,UKH21,Luton,UK,0.994323939,>0.7
+125,UKL21,Monmouthshire and Newport,UK,0.99413472,>0.7
+126,UKF12,East Derbyshire,UK,0.993929828,>0.7
+127,UKK23,Somerset,UK,0.993552355,>0.7
+128,UKM61,Caithness & Sutherland and Ross & Cromarty,UK,0.993258287,>0.7
+129,UKM35,"Inverclyde, East Renfrewshire and Renfrewshire",UK,0.993150838,>0.7
+130,UKD71,East Merseyside,UK,0.993004943,>0.7
+131,UKL18,Swansea,UK,0.992887967,>0.7
+132,UKH37,Essex Thames Gateway,UK,0.992311138,>0.7
+133,UKJ22,East Sussex CC,UK,0.991640117,>0.7
+134,UKM36,North Lanarkshire,UK,0.99118151,>0.7
+135,UKH23,Hertfordshire,UK,0.990521462,>0.7
+136,UKG31,Birmingham,UK,0.990388511,>0.7
+137,UKG11,"Herefordshire, County of",UK,0.990288299,>0.7
+138,UKJ21,Brighton and Hove,UK,0.988963508,>0.7
+139,UKJ44,East Kent,UK,0.988877409,>0.7
+140,UKI44,Lewisham and Southwark,UK,0.988692064,>0.7
+141,UKJ27,West Sussex (South West),UK,0.988321817,>0.7
+142,UKM50,Aberdeen City and Aberdeenshire,UK,0.98487208,>0.7
+143,UKH34,Essex Haven Gateway,UK,0.984403636,>0.7
+144,UKK43,Devon CC,UK,0.984251103,>0.7
+145,UKM22,Clackmannanshire and Fife,UK,0.984219629,>0.7
+146,MT001,Malta,MT,0.984013086,>0.7
+147,UKD11,West Cumbria,UK,0.983905274,>0.7
+148,IE024,South-East (IE),IE,0.981411076,>0.7
+149,UKD44,Lancaster and Wyre,UK,0.981241224,>0.7
+150,UKM62,"Inverness & Nairn and Moray, Badenoch & Strathspey",UK,0.980434494,>0.7
+151,UKI51,Bexley and Greenwich,UK,0.979141876,>0.7
+152,UKM31,"East Dunbartonshire, West Dunbartonshire and Helensburgh & Lomond",UK,0.979004752,>0.7
+153,IE025,South-West (IE),IE,0.978174489,>0.7
+154,UKI71,Barnet,UK,0.976165307,>0.7
+155,UKM38,South Lanarkshire,UK,0.975554928,>0.7
+156,UKC21,Northumberland,UK,0.972512148,>0.7
+157,UKI63,"Merton, Kingston upon Thames and Sutton",UK,0.970104499,>0.7
+158,UKF16,South Nottinghamshire,UK,0.968408147,>0.7
+159,UKI53,Redbridge and Waltham Forest,UK,0.967448849,>0.7
+160,UKN05,West and South of Northern Ireland,UK,0.963078796,>0.7
+161,UKI33,Kensington & Chelsea and Hammersmith & Fulham,UK,0.960547898,>0.7
+162,IE022,Mid-East,IE,0.960371347,>0.7
+163,UKI74,Harrow and Hillingdon,UK,0.959372512,>0.7
+164,UKM64,Eilean Siar (Western Isles),UK,0.958705945,>0.7
+165,IE011,Border,IE,0.957610362,>0.7
+166,IE012,Midland,IE,0.957546091,>0.7
+167,IE023,Mid-West,IE,0.957460883,>0.7
+168,EL623,"Ιθάκη, Κεφαλληνία (Ithaki, Kefallinia)",EL,0.955238591,>0.7
+169,UKH36,Heart of Essex,UK,0.950997579,>0.7
+170,UKG24,Staffordshire CC,UK,0.949214967,>0.7
+171,IE013,West,IE,0.935210474,>0.7
+172,UKJ25,West Surrey,UK,0.921368612,>0.7
+173,UKN04,North of Northern Ireland,UK,0.920972534,>0.7
+174,UKJ28,West Sussex (North East),UK,0.910133118,>0.7
+175,UKC12,South Teesside,UK,0.909606784,>0.7
+176,UKN03,East of Northern Ireland,UK,0.902224637,>0.7
+177,UKG13,Warwickshire,UK,0.878844131,>0.7
+178,UKM32,Dumfries & Galloway,UK,0.868427952,>0.7
+179,UKG21,Telford and Wrekin,UK,0.862008922,>0.7
+180,EL532,Καστοριά (Kastoria),EL,0.819156679,>0.7
+181,MT002,Gozo and Comino / Għawdex u Kemmuna,MT,0.818773583,>0.7
+182,UKN01,Belfast,UK,0.802330026,>0.7
+183,BE322,Arr. Charleroi,BE,0.799676974,>0.7
+184,UKC11,Hartlepool and Stockton-on-Tees,UK,0.766550177,>0.7
+185,BE253,Arr. Ieper,BE,0.735330257,>0.7
+186,EL645,Φωκίδα (Fokida),EL,0.730769231,>0.7
+187,RO121,Alba,RO,0.694155124,>0.6
+188,UKJ36,Central Hampshire,UK,0.691519106,>0.6
+189,UKK30,Cornwall and Isles of Scilly,UK,0.651092819,>0.6
+190,RO125,Mureş,RO,0.650281435,>0.6
+191,FR252,Manche,FR,0.620496966,>0.6
+192,FR231,Eure,FR,0.608449039,>0.6
+193,FR815,Pyrénées-Orientales,FR,0.58793003,>0.5
+194,FR717,Savoie,FR,0.579213436,>0.5
+195,EL303,Κεντρικός Τομέας Αθηνών (Kentrikos Tomeas Athinon),EL,0.579114352,>0.5
+196,FR262,Nièvre,FR,0.573853964,>0.5
+197,FR712,Ardèche,FR,0.566157802,>0.5
+198,RO226,Vrancea,RO,0.563384753,>0.5
+199,FR101,Paris,FR,0.563142138,>0.5
+200,FR432,Jura,FR,0.562669233,>0.5
+201,FR253,Orne,FR,0.557792506,>0.5
+202,EL422,"Άνδρος, Θήρα, Κέα, Μήλος, Μύκονος, Νάξος, Πάρος, Σύρος, Τήνος (Andros, Thira, Kea, Milos, Mykonos, Naxos, Paros,  Syros, Tinos)",EL,0.550535475,>0.5
+203,FR831,Corse-du-Sud,FR,0.550266659,>0.5
+204,EL624,Λευκάδα (Lefkada),EL,0.550207039,>0.5
+205,FR107,Val-de-Marne,FR,0.545159637,>0.5
+206,FR221,Aisne,FR,0.541110785,>0.5
+207,FR813,Hérault,FR,0.539895595,>0.5
+208,FR105,Hauts-de-Seine,FR,0.536499425,>0.5
+209,FR533,Deux-Sèvres,FR,0.534559651,>0.5
+210,FR826,Vaucluse,FR,0.534050202,>0.5
+211,FR823,Alpes-Maritimes,FR,0.531368088,>0.5
+212,FR245,Loir-et-Cher,FR,0.527805964,>0.5
+213,FR108,Val-d'Oise,FR,0.526238902,>0.5
+214,DEA33,"Münster, Kreisfreie Stadt",DE,0.524957916,>0.5
+215,FR243,Indre,FR,0.522967862,>0.5
+216,FR434,Territoire de Belfort,FR,0.521391448,>0.5
+217,FR625,Lot,FR,0.520706216,>0.5
+218,FR515,Vendée,FR,0.517806904,>0.5
+219,DE938,Heidekreis,DE,0.517741607,>0.5
+220,FR103,Yvelines,FR,0.51727049,>0.5
+221,FR623,Haute-Garonne,FR,0.515815424,>0.5
+222,FR102,Seine-et-Marne,FR,0.514613509,>0.5
+223,FR223,Somme,FR,0.513473847,>0.5
+224,FR251,Calvados,FR,0.513061537,>0.5
+225,HU232,Somogy,HU,0.510575764,>0.5
+226,DEA17,"Oberhausen, Kreisfreie Stadt",DE,0.509728299,>0.5
+227,FR431,Doubs,FR,0.50339716,>0.5
+228,FR264,Yonne,FR,0.503236986,>0.5
+229,FR824,Bouches-du-Rhône,FR,0.502796275,>0.5
+230,FR106,Seine-Saint-Denis,FR,0.501431788,>0.5
+231,FR513,Mayenne,FR,0.498517947,>0.4
+232,DEA54,"Hamm, Kreisfreie Stadt",DE,0.498318812,>0.4
+233,FR211,Ardennes,FR,0.498113849,>0.4
+234,FR263,Saône-et-Loire,FR,0.497828453,>0.4
+235,FR614,Lot-et-Garonne,FR,0.497543389,>0.4
+236,FR532,Charente-Maritime,FR,0.496071315,>0.4
+237,EL421,"Κάλυμνος, Κάρπαθος, Κως, Ρόδος (Kalymnos, Karpathos, Kos, Rodos)",EL,0.495697075,>0.4
+238,FR261,Côte-d'Or,FR,0.495327666,>0.4
+239,FR812,Gard,FR,0.493728108,>0.4
+240,FR613,Landes,FR,0.491743557,>0.4
+241,EL633,Ηλεία (Ileia),EL,0.488404154,>0.4
+242,FR626,Hautes-Pyrénées,FR,0.486027223,>0.4
+243,DEA35,Coesfeld,DE,0.486000228,>0.4
+244,DEB33,"Landau in der Pfalz, Kreisfreie Stadt",DE,0.483920143,>0.4
+245,FR411,Meurthe-et-Moselle,FR,0.483661838,>0.4
+246,FR822,Hautes-Alpes,FR,0.48275882,>0.4
+247,FR414,Vosges,FR,0.482003584,>0.4
+248,RO317,Teleorman,RO,0.478397857,>0.4
+249,FR714,Isère,FR,0.477592273,>0.4
+250,FR302,Pas-de-Calais,FR,0.477514,>0.4
+251,EL307,"Πειραιάς, Νήσοι (Peiraias, Nisoi)",EL,0.476892402,>0.4
+252,FR104,Essonne,FR,0.476157127,>0.4
+253,DE914,Gifhorn,DE,0.475125956,>0.4
+254,DEF03,"Lübeck, Kreisfreie Stadt",DE,0.47481752,>0.4
+255,FR514,Sarthe,FR,0.473817501,>0.4
+256,FR628,Tarn-et-Garonne,FR,0.473204508,>0.4
+257,FR531,Charente,FR,0.470899357,>0.4
+258,DEA53,"Hagen, Kreisfreie Stadt",DE,0.470684827,>0.4
+259,FR713,Drôme,FR,0.469631257,>0.4
+260,FR534,Vienne,FR,0.468194577,>0.4
+261,FR825,Var,FR,0.467350658,>0.4
+262,DEE02,"Halle (Saale), Kreisfreie Stadt",DE,0.467338733,>0.4
+263,FR715,Loire,FR,0.466637119,>0.4
+264,FR413,Moselle,FR,0.46584269,>0.4
+265,DEA19,"Solingen, Kreisfreie Stadt",DE,0.465756363,>0.4
+266,FR246,Loiret,FR,0.464566364,>0.4
+267,FR718,Haute-Savoie,FR,0.46335139,>0.4
+268,FR222,Oise,FR,0.463155768,>0.4
+269,FR716,Rhône,FR,0.462775779,>0.4
+270,EL433,Ρεθύμνη (Rethymni),EL,0.462662095,>0.4
+271,FR421,Bas-Rhin,FR,0.461744758,>0.4
+272,FR244,Indre-et-Loire,FR,0.461448375,>0.4
+273,RO115,Satu Mare,RO,0.461407247,>0.4
+274,BE100,Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad,BE,0.461301494,>0.4
+275,FR615,Pyrénées-Atlantiques,FR,0.460868317,>0.4
+276,FR301,Nord,FR,0.459650863,>0.4
+277,ES612,Cádiz,ES,0.458611217,>0.4
+278,FR241,Cher,FR,0.458108735,>0.4
+279,NL326,Groot-Amsterdam,NL,0.456709656,>0.4
+280,DE111,"Stuttgart, Stadtkreis",DE,0.456689737,>0.4
+281,BE310,Arr. Nivelles,BE,0.454822695,>0.4
+282,FR511,Loire-Atlantique,FR,0.454236216,>0.4
+283,PT119,Ave,PT,0.453216363,>0.4
+284,FR612,Gironde,FR,0.451970156,>0.4
+285,FR213,Marne,FR,0.451262525,>0.4
+286,FR523,Ille-et-Vilaine,FR,0.451161805,>0.4
+287,RO113,Cluj,RO,0.450963774,>0.4
+288,DEB36,"Neustadt an der Weinstra?e, Kreisfreie Stadt",DE,0.450378704,>0.4
+289,FR242,Eure-et-Loir,FR,0.450081533,>0.4
+290,FR422,Haut-Rhin,FR,0.448564506,>0.4
+291,FR412,Meuse,FR,0.448362398,>0.4
+292,FR512,Maine-et-Loire,FR,0.447388489,>0.4
+293,FR433,Haute-Saône,FR,0.44619684,>0.4
+294,DEA13,"Essen, Kreisfreie Stadt",DE,0.443368545,>0.4
+295,DEB22,Bernkastel-Wittlich,DE,0.443262305,>0.4
+296,BE321,Arr. Ath,BE,0.441627472,>0.4
+297,FR724,Puy-de-Dôme,FR,0.441254252,>0.4
+298,FR627,Tarn,FR,0.44063467,>0.4
+299,FR711,Ain,FR,0.440065776,>0.4
+300,EL301,Βόρειος Τομέας Αθηνών (Voreios Tomeas Athinon),EL,0.439467399,>0.4
+301,FR632,Creuse,FR,0.436602083,>0.4
+302,DEB3F,"Kaiserslautern, Landkreis",DE,0.436170413,>0.4
+303,FR723,Haute-Loire,FR,0.436167888,>0.4
+304,FR821,Alpes-de-Haute-Provence,FR,0.435848069,>0.4
+305,FR633,Haute-Vienne,FR,0.435249461,>0.4
+306,PT11A,Área Metropolitana do Porto,PT,0.434072744,>0.4
+307,DE803,"Rostock, Kreisfreie Stadt",DE,0.433955877,>0.4
+308,DEA55,"Herne, Kreisfreie Stadt",DE,0.432461107,>0.4
+309,FR232,Seine-Maritime,FR,0.431620996,>0.4
+310,DE915,Göttingen,DE,0.430378474,>0.4
+311,ITG16,Enna,IT,0.429297271,>0.4
+312,FR521,Côtes-d'Armor,FR,0.428383018,>0.4
+313,FR631,Corrèze,FR,0.426475949,>0.4
+314,DE244,"Hof, Kreisfreie Stadt",DE,0.424747264,>0.4
+315,FR611,Dordogne,FR,0.424200125,>0.4
+316,FR621,Ariège,FR,0.423697598,>0.4
+317,BE241,Arr. Halle-Vilvoorde,BE,0.421958975,>0.4
+318,EL522,Θεσσαλονίκη (Thessaloniki),EL,0.421243143,>0.4
+319,DE234,Amberg-Sulzbach,DE,0.420989897,>0.4
+320,FR814,Lozère,FR,0.419940931,>0.4
+321,BE323,Arr. Mons,BE,0.41955335,>0.4
+322,FR214,Haute-Marne,FR,0.419164587,>0.4
+323,LU000,Luxembourg,LU,0.417755344,>0.4
+324,DE126,"Mannheim, Stadtkreis",DE,0.416302445,>0.4
+325,DEA45,Lippe,DE,0.416203593,>0.4
+326,FR524,Morbihan,FR,0.413873992,>0.4
+327,Dec-02,Merzig-Wadern,DE,0.413463994,>0.4
+328,NL411,West-Noord-Brabant,NL,0.411117017,>0.4
+329,DEB23,Eifelkreis Bitburg-Prüm,DE,0.410779948,>0.4
+330,EL305,Ανατολική Αττική (Anatoliki Attiki),EL,0.41066464,>0.4
+331,FR212,Aube,FR,0.410363994,>0.4
+332,FR721,Allier,FR,0.409702154,>0.4
+333,DE600,Hamburg,DE,0.407725304,>0.4
+334,NL333,Delft en Westland,NL,0.407230621,>0.4
+335,RO424,Timiş,RO,0.407116462,>0.4
+336,HR035,Splitsko-dalmatinska županija,HR,0.40583758,>0.4
+337,FR522,Finistère,FR,0.404051041,>0.4
+338,DE252,"Erlangen, Kreisfreie Stadt",DE,0.403521927,>0.4
+339,DE929,Region Hannover,DE,0.402649579,>0.4
+340,DE212,"München, Kreisfreie Stadt",DE,0.401932819,>0.4
+341,DE246,"Bayreuth, Landkreis",DE,0.400392789,>0.4
+342,FR811,Aude,FR,0.400251181,>0.4
+343,DE233,"Weiden i. d. Opf,Kreisfreie Stadt",DE,0.4,>0.4
+344,FRA40,La Réunion,FR,0.398310216,>0.3
+345,DE142,"Tübingen, Landkreis",DE,0.396946928,>0.3
+346,DEA11,"Düsseldorf, Kreisfreie Stadt",DE,0.395926338,>0.3
+347,EL651,"Αργολίδα, Αρκαδία (Argolida, Arkadia)",EL,0.394774208,>0.3
+348,FR624,Gers,FR,0.394558435,>0.3
+349,DEA18,"Remscheid, Kreisfreie Stadt",DE,0.394463596,>0.3
+350,DEB17,Mayen-Koblenz,DE,0.394327506,>0.3
+351,EL541,"Άρτα, Πρέβεζα (Arta, Preveza)",EL,0.394196429,>0.3
+352,BG424,Смолян (Smolyan),BG,0.391694398,>0.3
+353,DE714,"Wiesbaden, Kreisfreie Stadt",DE,0.390246366,>0.3
+354,RO312,Călăraşi,RO,0.388867402,>0.3
+355,BE335,Arr. Verviers - communes francophones,BE,0.388151171,>0.3
+356,DE21H,"München, Landkreis",DE,0.386655361,>0.3
+357,EL413,Χίος (Chios),EL,0.386507937,>0.3
+358,DE94G,Wesermarsch,DE,0.386454573,>0.3
+359,DEB15,Birkenfeld,DE,0.385798399,>0.3
+360,SE110,Stockholms län,SE,0.385029268,>0.3
+361,HU101,Budapest,HU,0.384781775,>0.3
+362,FR622,Aveyron,FR,0.384297808,>0.3
+363,DE231,"Amberg, Kreisfreie Stadt",DE,0.38408762,>0.3
+364,DE26A,Main-Spessart,DE,0.384033096,>0.3
+365,DEA42,Gütersloh,DE,0.382137416,>0.3
+366,EL622,Κέρκυρα (Kerkyra),EL,0.381837533,>0.3
+367,FRA10,Guadeloupe,FR,0.38009058,>0.3
+368,DEB3A,"Zweibrücken, Kreisfreie Stadt",DE,0.379775712,>0.3
+369,DE21B,Freising,DE,0.379735457,>0.3
+370,DE71A,Main-Taunus-Kreis,DE,0.379460882,>0.3
+371,PT187,Alentejo Central,PT,0.379347624,>0.3
+372,DE40G,Spree-Neiße,DE,0.377904174,>0.3
+373,DE144,"Ulm, Stadtkreis",DE,0.37740696,>0.3
+374,BE222,Arr. Maaseik,BE,0.377033729,>0.3
+375,DE21E,Landsberg am Lech,DE,0.376005521,>0.3
+376,RO213,Iaşi,RO,0.375170436,>0.3
+377,DEG0M,Altenburger Land,DE,0.375010675,>0.3
+378,DE251,"Ansbach, Kreisfreie Stadt",DE,0.374266573,>0.3
+379,DE11C,Heidenheim,DE,0.373822642,>0.3
+380,DEA59,Olpe,DE,0.373476664,>0.3
+381,DE254,"Nürnberg, Kreisfreie Stadt",DE,0.373375289,>0.3
+382,DE942,"Emden, Kreisfreie Stadt",DE,0.372075226,>0.3
+383,DEB3B,Alzey-Worms,DE,0.371498728,>0.3
+384,FR722,Cantal,FR,0.371260562,>0.3
+385,FRA30,Guyane,FR,0.370585545,>0.3
+386,FRA20,Martinique,FR,0.369579375,>0.3
+387,DEB3G,Kusel,DE,0.369422395,>0.3
+388,DE93B,Verden,DE,0.369254198,>0.3
+389,DE716,Darmstadt-Dieburg,DE,0.368922555,>0.3
+390,HR048,Virovitičko-podravska županija,HR,0.368652034,>0.3
+391,DEG03,"Jena, Kreisfreie Stadt",DE,0.368150698,>0.3
+392,FR832,Haute-Corse,FR,0.367182356,>0.3
+393,DE269,Miltenberg,DE,0.367146201,>0.3
+394,DE947,Aurich,DE,0.367082191,>0.3
+395,DEB25,Trier-Saarburg,DE,0.366464564,>0.3
+396,DEB3H,Südliche Weinstraße,DE,0.366114666,>0.3
+397,DE722,Lahn-Dill-Kreis,DE,0.36572592,>0.3
+398,DE219,Eichstätt,DE,0.365431723,>0.3
+399,DE117,"Heilbronn, Stadtkreis",DE,0.36522608,>0.3
+400,DE919,Osterode am Harz,DE,0.365212916,>0.3
+401,DE242,"Bayreuth, Kreisfreie Stadt",DE,0.364969148,>0.3
+402,DEB3D,Donnersbergkreis,DE,0.364802744,>0.3
+403,BE325,Arr. Soignies,BE,0.364314304,>0.3
+404,DEB13,Altenkirchen (Westerwald),DE,0.364257919,>0.3
+405,RO224,Galaţi,RO,0.36309371,>0.3
+406,DEF0F,Stormarn,DE,0.36289213,>0.3
+407,DEB21,"Trier, Kreisfreie Stadt",DE,0.362484167,>0.3
+408,DE237,Neustadt a. d. Waldnaab,DE,0.362466928,>0.3
+409,DEA22,"Bonn, Kreisfreie Stadt",DE,0.362033205,>0.3
+410,DE926,Holzminden,DE,0.361914634,>0.3
+411,DK012,Københavns omegn,DK,0.361878606,>0.3
+412,FRA50,Mayotte,FR,0.36184167,>0.3
+413,DE112,Böblingen,DE,0.36138702,>0.3
+414,DEF0C,Schleswig-Flensburg,DE,0.361136172,>0.3
+415,DE21L,Starnberg,DE,0.361004322,>0.3
+416,DE27A,Lindau (Bodensee),DE,0.360602121,>0.3
+417,DE125,"Heidelberg, Stadtkreis",DE,0.360264346,>0.3
+418,Dec-01,Regionalverband Saarbrücken,DE,0.360076522,>0.3
+419,DEF0D,Segeberg,DE,0.359862792,>0.3
+420,DEE08,Burgenlandkreis,DE,0.359676657,>0.3
+421,DE113,Esslingen,DE,0.358909526,>0.3
+422,DE913,"Wolfsburg, Kreisfreie Stadt",DE,0.358635711,>0.3
+423,DE262,"Schweinfurt, Kreisfreie Stadt",DE,0.358528844,>0.3
+424,DEF02,"Kiel, Kreisfreie Stadt",DE,0.357641392,>0.3
+425,DEB12,Ahrweiler,DE,0.3574722,>0.3
+426,DEA1D,Rhein-Kreis Neuss,DE,0.357281535,>0.3
+427,DE71C,"Offenbach, Landkreis",DE,0.357256499,>0.3
+428,DE24B,Kulmbach,DE,0.357104058,>0.3
+429,DEA41,"Bielefeld, Kreisfreie Stadt",DE,0.356673059,>0.3
+430,DE939,Stade,DE,0.356276334,>0.3
+431,DEA56,Ennepe-Ruhr-Kreis,DE,0.35612618,>0.3
+432,DE80O,Ludwigslust-Parchim,DE,0.355984296,>0.3
+433,HR032,Ličko-senjska županija,HR,0.35576296,>0.3
+434,DEE05,Anhalt-Bitterfeld,DE,0.355746779,>0.3
+435,DEG0N,"Eisenach, Kreisfreie Stadt",DE,0.355253732,>0.3
+436,DEG0D,Sömmerda,DE,0.354780618,>0.3
+437,DEA36,Recklinghausen,DE,0.354742026,>0.3
+438,RO316,Prahova,RO,0.354606911,>0.3
+439,EL632,Αχαΐα (Achaia),EL,0.354294725,>0.3
+440,DE935,"Lüneburg, Landkreis",DE,0.353765868,>0.3
+441,DE138,Konstanz,DE,0.352096513,>0.3
+442,BE242,Arr. Leuven,BE,0.351494848,>0.3
+443,CY000,Κύπρος (Kypros),CY,0.351483115,>0.3
+444,DEG0A,Kyffhäuserkreis,DE,0.351453221,>0.3
+445,DE116,Rems-Murr-Kreis,DE,0.351353938,>0.3
+446,DEG0F,Ilm-Kreis,DE,0.351266627,>0.3
+447,DE122,"Karlsruhe, Stadtkreis",DE,0.351149636,>0.3
+448,DE211,"Ingolstadt, Kreisfreie Stadt",DE,0.351136162,>0.3
+449,DE717,Groß-Gerau,DE,0.351124347,>0.3
+450,DEA24,"Leverkusen, Kreisfreie Stadt",DE,0.350840521,>0.3
+451,DEE0C,Salzlandkreis,DE,0.350802358,>0.3
+452,DE300,Berlin,DE,0.350713181,>0.3
+453,DEA32,"Gelsenkirchen, Kreisfreie Stadt",DE,0.350711174,>0.3
+454,DEA51,"Bochum, Kreisfreie Stadt",DE,0.350325126,>0.3
+455,EL306,Δυτική Αττική (Dytiki Attiki),EL,0.349537174,>0.3
+456,DEG0I,Saalfeld-Rudolstadt,DE,0.349097186,>0.3
+457,DEA1C,Mettmann,DE,0.348365402,>0.3
+458,DE11D,Ostalbkreis,DE,0.348155522,>0.3
+459,DK011,Byen København,DK,0.347913715,>0.3
+460,DE21F,Miesbach,DE,0.347853259,>0.3
+461,DE912,"Salzgitter, Kreisfreie Stadt",DE,0.347503657,>0.3
+462,DEA31,"Bottrop, Kreisfreie Stadt",DE,0.346678778,>0.3
+463,EL527,Χαλκιδική (Chalkidiki),EL,0.346669635,>0.3
+464,FI1B1,Helsinki-Uusimaa,FI,0.346577825,>0.3
+465,DE141,Reutlingen,DE,0.346537374,>0.3
+466,DED53,Nordsachsen,DE,0.34646411,>0.3
+467,DE22B,Straubing-Bogen,DE,0.346415757,>0.3
+468,DEA2C,Rhein-Sieg-Kreis,DE,0.346209158,>0.3
+469,DE721,"Gießen, Landkreis",DE,0.345857894,>0.3
+470,DEB24,Vulkaneifel,DE,0.344808043,>0.3
+471,DEA29,Heinsberg,DE,0.344620595,>0.3
+472,DEB32,"Kaiserslautern, Kreisfreie Stadt",DE,0.344576353,>0.3
+473,DEA12,"Duisburg, Kreisfreie Stadt",DE,0.34438312,>0.3
+474,DE26B,"Schweinfurt, Landkreis",DE,0.344313175,>0.3
+475,DEG0C,Gotha,DE,0.344138625,>0.3
+476,NL337,Agglomeratie Leiden en Bollenstreek,NL,0.344024055,>0.3
+477,DEA26,Düren,DE,0.344017033,>0.3
+478,DEB18,Neuwied,DE,0.343945479,>0.3
+479,DE224,Deggendorf,DE,0.343542293,>0.3
+480,DE118,"Heilbronn, Landkreis",DE,0.343274302,>0.3
+481,,,AT,0.343204357,>0.3
+482,DEE07,Börde,DE,0.34288067,>0.3
+483,DEB3J,Mainz-Bingen,DE,0.342670047,>0.3
+484,RO223,Constanţa,RO,0.342420111,>0.3
+485,DEA14,"Krefeld, Kreisfreie Stadt",DE,0.342408686,>0.3
+486,HU223,Zala,HU,0.342202145,>0.3
+487,DE928,Schaumburg,DE,0.341803127,>0.3
+488,DEG0H,Sonneberg,DE,0.341252775,>0.3
+489,DEB16,Cochem-Zell,DE,0.341176961,>0.3
+490,DE94F,Vechta,DE,0.340977977,>0.3
+491,DEA43,Herford,DE,0.340837365,>0.3
+492,DEA2D,Städteregion Aachen,DE,0.34080481,>0.3
+493,HU999,Budapest ker,HU,0.340793651,>0.3
+494,DE267,Haßberge,DE,0.340223066,>0.3
+495,DED21,"Dresden, Kreisfreie Stadt",DE,0.340175903,>0.3
+496,DE408,Havelland,DE,0.340142756,>0.3
+497,DE501,"Bremen, Kreisfreie Stadt",DE,0.340031263,>0.3
+498,DE26C,"Würzburg, Landkreis",DE,0.339989021,>0.3
+499,DEB3K,Südwestpfalz,DE,0.33994246,>0.3
+500,DEA1A,"Wuppertal, Kreisfreie Stadt",DE,0.339780763,>0.3
+501,DE123,"Karlsruhe, Landkreis",DE,0.339741433,>0.3
+502,DEG0L,Greiz,DE,0.339497585,>0.3
+503,DE232,"Regensburg, Kreisfreie Stadt",DE,0.339424479,>0.3
+504,BE332,Arr. Liège,BE,0.339342334,>0.3
+505,DEG0J,Saale-Holzland-Kreis,DE,0.33930521,>0.3
+506,DE257,Erlangen-Höchstadt,DE,0.338860783,>0.3
+507,DE235,Cham,DE,0.338621319,>0.3
+508,DE271,"Augsburg, Kreisfreie Stadt",DE,0.33833845,>0.3
+509,DEA38,Warendorf,DE,0.338297677,>0.3
+510,DE114,Göppingen,DE,0.338259663,>0.3
+511,DE40A,Oberhavel,DE,0.33807335,>0.3
+512,DE934,Lüchow-Dannenberg,DE,0.337961648,>0.3
+513,DEA58,Märkischer Kreis,DE,0.337918871,>0.3
+514,DE137,Tuttlingen,DE,0.337895658,>0.3
+515,DEE03,"Magdeburg, Kreisfreie Stadt",DE,0.337701555,>0.3
+516,PT16J,Beiras e Serra da Estrela,PT,0.337696603,>0.3
+517,DEF05,Dithmarschen,DE,0.337647219,>0.3
+518,Dec-04,Saarlouis,DE,0.337207358,>0.3
+519,DE94D,"Oldenburg, Landkreis",DE,0.337200589,>0.3
+520,DEB11,"Koblenz, Kreisfreie Stadt",DE,0.337076078,>0.3
+521,DE129,"Pforzheim, Stadtkreis",DE,0.336839664,>0.3
+522,DEE0B,Saalekreis,DE,0.336570139,>0.3
+523,DEB19,Rhein-Hunsrück-Kreis,DE,0.336337155,>0.3
+524,EL304,Νότιος Τομέας Αθηνών (Notios Tomeas Athinon),EL,0.336097058,>0.3
+525,DE115,Ludwigsburg,DE,0.33597192,>0.3
+526,DE943,"Oldenburg (Oldenburg), Kreisfreie Stadt",DE,0.335897436,>0.3
+527,DE94E,"Osnabrück, Landkreis",DE,0.335714107,>0.3
+528,BE212,Arr. Mechelen,BE,0.335632962,>0.3
+529,BE213,Arr. Turnhout,BE,0.335390457,>0.3
+530,DE80L,Vorpommern-Rügen,DE,0.335081852,>0.3
+531,DE128,Rhein-Neckar-Kreis,DE,0.334980104,>0.3
+532,DE725,Vogelsbergkreis,DE,0.334944634,>0.3
+533,DE21M,Traunstein,DE,0.334915651,>0.3
+534,DEA23,"Köln, Kreisfreie Stadt",DE,0.334814047,>0.3
+535,EL412,"Ικαρία, Σάμος (Ikaria, Samos)",EL,0.334255528,>0.3
+536,BE327,Arr. Tournai,BE,0.334023422,>0.3
+537,DE12B,Enzkreis,DE,0.333888514,>0.3
+538,DEA5C,Unna,DE,0.333592128,>0.3
+539,DE948,Cloppenburg,DE,0.333582699,>0.3
+540,DEA15,"Mönchengladbach, Kreisfreie Stadt",DE,0.333560331,>0.3
+541,DE147,Bodenseekreis,DE,0.333105935,>0.3
+542,DE121,"Baden-Baden, Stadtkreis",DE,0.332930729,>0.3
+543,BE341,Arr. Arlon,BE,0.33290123,>0.3
+544,DE711,"Darmstadt, Kreisfreie Stadt",DE,0.332788908,>0.3
+545,DE27C,Unterallgäu,DE,0.332687492,>0.3
+546,DEG0K,Saale-Orla-Kreis,DE,0.332682116,>0.3
+547,BE326,Arr. Thuin,BE,0.332403532,>0.3
+548,DE255,"Schwabach, Kreisfreie Stadt",DE,0.332349736,>0.3
+549,DE248,Forchheim,DE,0.332338907,>0.3
+550,DE24C,Lichtenfels,DE,0.331871754,>0.3
+551,DE23A,Tirschenreuth,DE,0.331627549,>0.3
+552,DEA57,Hochsauerlandkreis,DE,0.331364829,>0.3
+553,DEF04,"Neumünster, Kreisfreie Stadt",DE,0.331341424,>0.3
+554,DEG07,Nordhausen,DE,0.33126772,>0.3
+555,DE21N,Weilheim-Schongau,DE,0.331195845,>0.3
+556,DE804,"Schwerin, Kreisfreie Stadt",DE,0.33108693,>0.3
+557,DEA2B,Rheinisch-Bergischer Kreis,DE,0.331073284,>0.3
+558,HU321,Hajdú-Bihar,HU,0.331040531,>0.3
+559,DED2E,Meißen,DE,0.330751178,>0.3
+560,DE21A,Erding,DE,0.330636938,>0.3
+561,EL652,Κορινθία (Korinthia),EL,0.330585607,>0.3
+562,SE121,Uppsala län,SE,0.330339429,>0.3
+563,DE949,Emsland,DE,0.330186197,>0.3
+564,DE723,Limburg-Weilburg,DE,0.329977256,>0.3
+565,DE276,"Augsburg, Landkreis",DE,0.329817137,>0.3
+566,NL421,Noord-Limburg,NL,0.329640312,>0.3
+567,DEB3I,Rhein-Pfalz-Kreis,DE,0.329632511,>0.3
+568,DE217,Dachau,DE,0.329432686,>0.3
+569,DE925,Hildesheim,DE,0.329431207,>0.3
+570,DE931,Celle,DE,0.329396152,>0.3
+571,DEA52,"Dortmund, Kreisfreie Stadt",DE,0.328876809,>0.3
+572,DED51,"Leipzig, Kreisfreie Stadt",DE,0.328778894,>0.3
+573,DEA1E,Viersen,DE,0.32833796,>0.3
+574,DE91B,Wolfenbüttel,DE,0.328302605,>0.3
+575,DE724,Marburg-Biedenkopf,DE,0.327897541,>0.3
+576,DEA37,Steinfurt,DE,0.3277857,>0.3
+577,DE404,"Potsdam, Kreisfreie Stadt",DE,0.327662093,>0.3
+578,DEA2A,Oberbergischer Kreis,DE,0.327600186,>0.3
+579,DE91A,Peine,DE,0.327158697,>0.3
+580,RO122,Braşov,RO,0.3268413,>0.3
+581,DE406,Dahme-Spreewald,DE,0.326826114,>0.3
+582,DE133,Emmendingen,DE,0.326679068,>0.3
+583,FI1D6,Pohjois-Pohjanmaa,FI,0.326602279,>0.3
+584,DE945,"Wilhelmshaven, Kreisfreie Stadt",DE,0.326390256,>0.3
+585,DE911,"Braunschweig, Kreisfreie Stadt",DE,0.326237273,>0.3
+586,DE146,Biberach,DE,0.32617851,>0.3
+587,DE944,"Osnabrück, Kreisfreie Stadt",DE,0.325606633,>0.3
+588,DE149,Sigmaringen,DE,0.325547223,>0.3
+589,DEF09,Pinneberg,DE,0.325340746,>0.3
+590,DE227,"Landshut, Landkreis",DE,0.325163561,>0.3
+591,DE94B,Grafschaft Bentheim,DE,0.325084055,>0.3
+592,DE71E,Wetteraukreis,DE,0.325069376,>0.3
+593,RO126,Sibiu,RO,0.324974777,>0.3
+594,DE40H,Teltow-Fläming,DE,0.324727699,>0.3
+595,DED45,Zwickau,DE,0.324583936,>0.3
+596,DED42,Erzgebirgskreis,DE,0.324529469,>0.3
+597,DE131,"Freiburg im Breisgau, Stadtkreis",DE,0.324450324,>0.3
+598,DEB14,Bad Kreuznach,DE,0.324256735,>0.3
+599,DED41,"Chemnitz, Kreisfreie Stadt",DE,0.324072892,>0.3
+600,DK042,Østjylland,DK,0.32405715,>0.3
+601,DEB35,"Mainz, Kreisfreie Stadt",DE,0.32395376,>0.3
+602,BE352,Arr. Namur,BE,0.323852481,>0.3
+603,DED2D,Görlitz,DE,0.323625002,>0.3
+604,DE918,Northeim,DE,0.323603229,>0.3
+605,DE21K,"Rosenheim, Landkreis",DE,0.323542157,>0.3
+606,DEF06,Herzogtum Lauenburg,DE,0.32309997,>0.3
+607,DEG05,"Weimar, Kreisfreie Stadt",DE,0.32303225,>0.3
+608,DE279,Neu-Ulm,DE,0.322960287,>0.3
+609,BE334,Arr. Waremme,BE,0.322949151,>0.3
+610,DE718,Hochtaunuskreis,DE,0.322717186,>0.3
+611,DE134,Ortenaukreis,DE,0.322588002,>0.3
+612,BE336,Bezirk Verviers - Deutschsprachige Gemeinschaft,BE,0.322455765,>0.3
+613,DE40E,Potsdam-Mittelmark,DE,0.322292106,>0.3
+614,DE239,Schwandorf,DE,0.322161463,>0.3
+615,DE933,Harburg,DE,0.321925363,>0.3
+616,PT170,Área Metropolitana de Lisboa,PT,0.321327094,>0.3
+617,DE937,Rotenburg (Wümme),DE,0.32124798,>0.3
+618,DEB3C,Bad Dürkheim,DE,0.32113009,>0.3
+619,DE265,Bad Kissingen,DE,0.320990232,>0.3
+620,DED2C,Bautzen,DE,0.32097369,>0.3
+621,NL339,Groot-Rijnmond,NL,0.320853079,>0.3
+622,DEA1F,Wesel,DE,0.320534669,>0.3
+623,DE143,Zollernalbkreis,DE,0.320443061,>0.3
+624,DE268,Kitzingen,DE,0.320216802,>0.3
+625,SE224,Skåne län,SE,0.320090007,>0.3
+626,DEA34,Borken,DE,0.31995431,>0.3
+627,DEF01,"Flensburg, Kreisfreie Stadt",DE,0.319928078,>0.3
+628,DE245,"Bamberg, Landkreis",DE,0.319840162,>0.3
+629,DE249,"Hof, Landkreis",DE,0.319796906,>0.3
+630,DEB38,"Speyer, Kreisfreie Stadt",DE,0.319409359,>0.3
+631,DE221,"Landshut, Kreisfreie Stadt",DE,0.319373871,>0.3
+632,DEA28,Euskirchen,DE,0.319317246,>0.3
+633,DEG0B,Schmalkalden-Meiningen,DE,0.319303932,>0.3
+634,DE94A,Friesland (DE),DE,0.318830323,>0.3
+635,DE936,Osterholz,DE,0.318751207,>0.3
+636,DE213,"Rosenheim, Kreisfreie Stadt",DE,0.318644445,>0.3
+637,SE232,Västra Götalands län,SE,0.318423609,>0.3
+638,DED44,Vogtlandkreis,DE,0.317537938,>0.3
+639,DE256,"Ansbach, Landkreis",DE,0.317478156,>0.3
+640,DE263,"Würzburg, Kreisfreie Stadt",DE,0.316987376,>0.3
+641,BE234,Arr. Gent,BE,0.316915858,>0.3
+642,DE216,Bad Tölz-Wolfratshausen,DE,0.316761998,>0.3
+643,DE40B,Oberspreewald-Lausitz,DE,0.316638267,>0.3
+644,DK014,Bornholm,DK,0.316484541,>0.3
+645,Dec-06,St. Wendel,DE,0.316395366,>0.3
+646,DE923,Hameln-Pyrmont,DE,0.316344903,>0.3
+647,DEA27,Rhein-Erft-Kreis,DE,0.316330847,>0.3
+648,DE264,"Aschaffenburg, Landkreis",DE,0.316223941,>0.3
+649,DE734,"Kassel, Landkreis",DE,0.315770048,>0.3
+650,ITF61,Cosenza,IT,0.315647651,>0.3
+651,DEA1B,Kleve,DE,0.315508453,>0.3
+652,ITG19,Siracusa,IT,0.315507626,>0.3
+653,DE21C,Fürstenfeldbruck,DE,0.315363725,>0.3
+654,DE148,Ravensburg,DE,0.315232418,>0.3
+655,DE124,Rastatt,DE,0.315099192,>0.3
+656,DE24A,Kronach,DE,0.314764747,>0.3
+657,DE228,"Passau, Landkreis",DE,0.314619489,>0.3
+658,DE941,"Delmenhorst, Kreisfreie Stadt",DE,0.314236972,>0.3
+659,DE274,"Memmingen, Kreisfreie Stadt",DE,0.31380698,>0.3
+660,RO413,Mehedinţi,RO,0.313513175,>0.3
+661,DE223,"Straubing, Kreisfreie Stadt",DE,0.313469659,>0.3
+662,DEA46,Minden-Lübbecke,DE,0.313456324,>0.3
+663,DED43,Mittelsachsen,DE,0.313148829,>0.3
+664,DEF0B,Rendsburg-Eckernförde,DE,0.313133552,>0.3
+665,NL341,Zeeuwsch-Vlaanderen,NL,0.313117449,>0.3
+666,DE715,Bergstraße,DE,0.312923725,>0.3
+667,EL631,Αιτωλοακαρνανία (Aitoloakarnania),EL,0.312840928,>0.3
+668,DE409,Märkisch-Oderland,DE,0.312806921,>0.3
+669,DEG0G,Weimarer Land,DE,0.31232532,>0.3
+670,HU212,Komárom-Esztergom,HU,0.312217986,>0.3
+671,DE222,"Passau, Kreisfreie Stadt",DE,0.312055404,>0.3
+672,DEA5B,Soest,DE,0.311490794,>0.3
+673,DE266,Rhön-Grabfeld,DE,0.311470736,>0.3
+674,RO116,Sălaj,RO,0.310302482,>0.3
+675,EL512,Ξάνθη (Xanthi),EL,0.310190222,>0.3
+676,DEB1A,Rhein-Lahn-Kreis,DE,0.310165779,>0.3
+677,DE119,Hohenlohekreis,DE,0.310118647,>0.3
+678,DK013,Nordsjælland,DK,0.310032275,>0.3
+679,DED52,Leipzig,DE,0.30985204,>0.3
+680,DE932,Cuxhaven,DE,0.309821562,>0.3
+681,DEG01,"Erfurt, Kreisfreie Stadt",DE,0.309667573,>0.3
+682,PT16I,Médio Tejo,PT,0.309363988,>0.3
+683,DE731,"Kassel, Kreisfreie Stadt",DE,0.309304494,>0.3
+684,DE80J,Mecklenburgische Seenplatte,DE,0.30907795,>0.3
+685,DEG06,Eichsfeld,DE,0.309073347,>0.3
+686,DEA47,Paderborn,DE,0.308681007,>0.3
+687,DE25A,Neustadt a. d. Aisch-Bad Windsheim,DE,0.308616949,>0.3
+688,DEB39,"Worms, Kreisfreie Stadt",DE,0.30810961,>0.3
+689,NL414,Zuidoost-Noord-Brabant,NL,0.307627419,>0.3
+690,DEG02,"Gera, Kreisfreie Stadt",DE,0.307567235,>0.3
+691,DEG0P,Wartburgkreis,DE,0.306358216,>0.3
+692,DE229,Regen,DE,0.306202214,>0.3
+693,RO421,Arad,RO,0.306092697,>0.3
+694,DEF0E,Steinburg,DE,0.305937356,>0.3
+695,DE261,"Aschaffenburg, Kreisfreie Stadt",DE,0.305811089,>0.3
+696,NL332,Agglomeratie 's-Gravenhage,NL,0.305677215,>0.3
+697,BE258,Arr. Veurne,BE,0.305637938,>0.3
+698,DE735,Schwalm-Eder-Kreis,DE,0.305287251,>0.3
+699,DE94C,Leer,DE,0.305084239,>0.3
+700,DEB1B,Westerwaldkreis,DE,0.304829306,>0.3
+701,DE275,Aichach-Friedberg,DE,0.304778669,>0.3
+702,DK050,Nordjylland,DK,0.304597688,>0.3
+703,DE21I,Neuburg-Schrobenhausen,DE,0.304375327,>0.3
+704,DE94H,Wittmund,DE,0.304207482,>0.3
+705,DE502,"Bremerhaven, Kreisfreie Stadt",DE,0.303626496,>0.3
+706,DE40I,Uckermark,DE,0.303446906,>0.3
+707,NL327,Het Gooi en Vechtstreek,NL,0.303247233,>0.3
+708,DE272,"Kaufbeuren, Kreisfreie Stadt",DE,0.303195744,>0.3
+709,DE40C,Oder-Spree,DE,0.302501242,>0.3
+710,DE80N,Vorpommern-Greifswald,DE,0.302076951,>0.3
+711,NL423,Zuid-Limburg,NL,0.301781573,>0.3
+712,DED2F,Sächsische Schweiz-Osterzgebirge,DE,0.301217285,>0.3
+713,DE12C,Freudenstadt,DE,0.300544992,>0.3
+714,DEE0E,Wittenberg,DE,0.300301026,>0.3
+715,DE736,Waldeck-Frankenberg,DE,0.299716168,>0.2
+716,DEE09,Harz,DE,0.299519531,>0.2
+717,DE139,Lörrach,DE,0.299202054,>0.2
+718,DE11B,Main-Tauber-Kreis,DE,0.298980872,>0.2
+719,DK032,Sydjylland,DK,0.298787768,>0.2
+720,DE719,Main-Kinzig-Kreis,DE,0.298720764,>0.2
+721,DE215,Berchtesgadener Land,DE,0.2987059,>0.2
+722,NL324,Agglomeratie Haarlem,NL,0.298617276,>0.2
+723,DEA16,"Mülheim an der Ruhr,Kreisfreie Stadt",DE,0.298471312,>0.2
+724,DE258,"Fürth, Landkreis",DE,0.298068396,>0.2
+725,DE71D,Rheingau-Taunus-Kreis,DE,0.297561169,>0.2
+726,NL113,Overig Groningen,NL,0.297491162,>0.2
+727,BE231,Arr. Aalst,BE,0.296779953,>0.2
+728,AT211,Klagenfurt-Villach,AT,0.296644106,>0.2
+729,DE277,Dillingen a.d. Donau,DE,0.296444844,>0.2
+730,DEE0A,Mansfeld-Südharz,DE,0.296113196,>0.2
+731,DE145,Alb-Donau-Kreis,DE,0.29596377,>0.2
+732,DE218,Ebersberg,DE,0.295854144,>0.2
+733,RO322,Ilfov,RO,0.295673756,>0.2
+734,DE40F,Prignitz,DE,0.295656287,>0.2
+735,Dec-05,Saarpfalz-Kreis,DE,0.295341927,>0.2
+736,DE916,Goslar,DE,0.295257753,>0.2
+737,SE125,Västmanlands län,SE,0.294240863,>0.2
+738,DE25B,Roth,DE,0.293720804,>0.2
+739,EL302,Δυτικός Τομέας Αθηνών (Dytikos Tomeas Athinon),EL,0.293527403,>0.2
+740,DEG04,"Suhl, Kreisfreie Stadt",DE,0.293498374,>0.2
+741,DE732,Fulda,DE,0.293265969,>0.2
+742,DE132,Breisgau-Hochschwarzwald,DE,0.292797944,>0.2
+743,ITF64,Vibo Valentia,IT,0.292086149,>0.2
+744,DE40D,Ostprignitz-Ruppin,DE,0.290576611,>0.2
+745,DE241,"Bamberg, Kreisfreie Stadt",DE,0.290355271,>0.2
+746,DE247,"Coburg, Landkreis",DE,0.290285722,>0.2
+747,DE226,Kelheim,DE,0.289860887,>0.2
+748,DEF07,Nordfriesland,DE,0.289709445,>0.2
+749,BE255,Arr. Oostende,BE,0.289548157,>0.2
+750,DE71B,Odenwaldkreis,DE,0.289434967,>0.2
+751,DEF0A,Plön,DE,0.289272008,>0.2
+752,DE27D,Donau-Ries,DE,0.289253981,>0.2
+753,BE343,Arr. Marche-en-Famenne,BE,0.288670643,>0.2
+754,FI197,Pirkanmaa,FI,0.288660465,>0.2
+755,DE12A,Calw,DE,0.288641522,>0.2
+756,DE22C,Dingolfing-Landau,DE,0.288529116,>0.2
+757,HU102,Pest,HU,0.288109036,>0.2
+758,DE21J,Pfaffenhofen a. d. Ilm,DE,0.287990072,>0.2
+759,DE136,Schwarzwald-Baar-Kreis,DE,0.2879154,>0.2
+760,HU211,Fejér,HU,0.287756791,>0.2
+761,BE254,Arr. Kortrijk,BE,0.287323082,>0.2
+762,DEA5A,Siegen-Wittgenstein,DE,0.287071077,>0.2
+763,SE212,Kronobergs län,SE,0.28675105,>0.2
+764,EL641,Βοιωτία (Voiotia),EL,0.28666887,>0.2
+765,BE251,Arr. Brugge,BE,0.286259555,>0.2
+766,DE11A,Schwäbisch Hall,DE,0.286061025,>0.2
+767,DE243,"Coburg, Kreisfreie Stadt",DE,0.285814562,>0.2
+768,DEE01,"Dessau-Roßlau, Kreisfreie Stadt",DE,0.285566516,>0.2
+769,BE252,Arr. Diksmuide,BE,0.285059348,>0.2
+770,DE253,"F?rth, Kreisfreie Stadt",DE,0.28482847,>0.2
+771,DEA44,Höxter,DE,0.284445789,>0.2
+772,NL213,Twente,NL,0.284183018,>0.2
+773,ITI43,Roma,IT,0.283988836,>0.2
+774,NL225,Achterhoek,NL,0.28391142,>0.2
+775,NL321,Kop van Noord-Holland,NL,0.283629474,>0.2
+776,DE13A,Waldshut,DE,0.283525629,>0.2
+777,AT127,Wiener Umland/Südteil,AT,0.28298417,>0.2
+778,HR045,Koprivničko-križevačka županija,HR,0.282247167,>0.2
+779,DE917,Helmstedt,DE,0.281904967,>0.2
+780,DE25C,Weißenburg-Gunzenhausen,DE,0.281800644,>0.2
+781,NL112,Delfzijl en omgeving,NL,0.281766986,>0.2
+782,RO111,Bihor,RO,0.281563573,>0.2
+783,BE324,Arr. Mouscron,BE,0.28138262,>0.2
+784,DE127,Neckar-Odenwald-Kreis,DE,0.281320575,>0.2
+785,ES614,Granada,ES,0.280532688,>0.2
+786,DK031,Fyn,DK,0.279850316,>0.2
+787,BE211,Arr. Antwerpen,BE,0.279839851,>0.2
+788,DEG0E,Hildburghausen,DE,0.279726962,>0.2
+789,AT341,Bludenz-Bregenzer Wald,AT,0.279404645,>0.2
+790,DE80K,Landkreis Rostock,DE,0.279239798,>0.2
+791,DE737,Werra-Meißner-Kreis,DE,0.279111565,>0.2
+792,AT314,Steyr-Kirchdorf,AT,0.279019777,>0.2
+793,DE225,Freyung-Grafenau,DE,0.278878446,>0.2
+794,AT315,Traunviertel,AT,0.278194534,>0.2
+795,ITC4C,Milano,IT,0.278013037,>0.2
+796,EL431,Ηράκλειο (Irakleio),EL,0.27795652,>0.2
+797,HR04E,Sisačko-moslavačka županija,HR,0.277888703,>0.2
+798,DEB3E,Germersheim,DE,0.277719817,>0.2
+799,DE922,Diepholz,DE,0.277597882,>0.2
+800,ITC46,Bergamo,IT,0.277245234,>0.2
+801,DE259,Nürnberger Land,DE,0.276830048,>0.2
+802,NL33A,Zuidoost-Zuid-Holland,NL,0.276638028,>0.2
+803,SE123,Östergötlands län,SE,0.276104952,>0.2
+804,DE405,Barnim,DE,0.275867337,>0.2
+805,BE235,Arr. Oudenaarde,BE,0.275719051,>0.2
+806,DEE0D,Stendal,DE,0.275314523,>0.2
+807,BE342,Arr. Bastogne,BE,0.275239316,>0.2
+808,DK041,Vestjylland,DK,0.275183299,>0.2
+809,BE351,Arr. Dinant,BE,0.274934274,>0.2
+810,DE402,"Cottbus, Kreisfreie Stadt",DE,0.27484875,>0.2
+811,AT323,Salzburg und Umgebung,AT,0.274832899,>0.2
+812,DE135,Rottweil,DE,0.274722029,>0.2
+813,BE344,Arr. Neufchâteau,BE,0.274671677,>0.2
+814,PL217,Tarnowski,PL,0.274533984,>0.2
+815,DE27E,Oberallgäu,DE,0.274437901,>0.2
+816,DK022,Vest- og Sydsjælland,DK,0.274417442,>0.2
+817,DE946,Ammerland,DE,0.274272592,>0.2
+818,BE236,Arr. Sint-Niklaas,BE,0.273848503,>0.2
+819,BE221,Arr. Hasselt,BE,0.273673301,>0.2
+820,DEB37,"Pirmasens, Kreisfreie Stadt",DE,0.2735492,>0.2
+821,NL310,Utrecht,NL,0.273451393,>0.2
+822,DEG09,Unstrut-Hainich-Kreis,DE,0.272696262,>0.2
+823,DE21D,Garmisch-Partenkirchen,DE,0.272522928,>0.2
+824,BE256,Arr. Roeselare,BE,0.269853513,>0.2
+825,NL413,Noordoost-Noord-Brabant,NL,0.269316958,>0.2
+826,BE223,Arr. Tongeren,BE,0.269200896,>0.2
+827,SE331,Västerbottens län,SE,0.269088586,>0.2
+828,BE233,Arr. Eeklo,BE,0.269081978,>0.2
+829,NL122,Zuidwest-Friesland,NL,0.268893771,>0.2
+830,AT130,Wien,AT,0.267660262,>0.2
+831,NL322,Alkmaar en omgeving,NL,0.267011252,>0.2
+832,DE927,Nienburg (Weser),DE,0.266012972,>0.2
+833,BE331,Arr. Huy,BE,0.26537342,>0.2
+834,NL325,Zaanstreek,NL,0.265154415,>0.2
+835,PL218,Nowosądecki,PL,0.263046455,>0.2
+836,ITC49,Lodi,IT,0.262995819,>0.2
+837,DE22A,Rottal-Inn,DE,0.262808465,>0.2
+838,DE80M,Nordwestmecklenburg,DE,0.262182409,>0.2
+839,DE21G,Mühldorf a. Inn,DE,0.262162467,>0.2
+840,NL422,Midden-Limburg,NL,0.261713421,>0.2
+841,BG411,София (столица) (Sofia (stolitsa)),BG,0.261499919,>0.2
+842,BE232,Arr. Dendermonde,BE,0.261220417,>0.2
+843,DE27B,Ostallgäu,DE,0.259639537,>0.2
+844,NL230,Flevoland,NL,0.259631948,>0.2
+845,DK021,Østsjælland,DK,0.258782438,>0.2
+846,EL613,"Μαγνησία, Σποράδες (Magnisia, Sporades)",EL,0.258429269,>0.2
+847,DEE06,Jerichower Land,DE,0.25814162,>0.2
+848,BE257,Arr. Tielt,BE,0.257974237,>0.2
+849,AT221,Graz,AT,0.257777351,>0.2
+850,SE332,Norrbottens län,SE,0.257155219,>0.2
+851,DEF08,Ostholstein,DE,0.2566885,>0.2
+852,SE221,Blekinge län,SE,0.256131,>0.2
+853,SE321,Västernorrlands län,SE,0.256054175,>0.2
+854,HR04D,Karlovačka županija,HR,0.255443659,>0.2
+855,AT322,Pinzgau-Pongau,AT,0.254720464,>0.2
+856,ES300,Madrid,ES,0.254569007,>0.2
+857,BE345,Arr. Virton,BE,0.254478296,>0.2
+858,PT16B,Oeste,PT,0.254341796,>0.2
+859,RO114,Maramureş,RO,0.254335928,>0.2
+860,DE93A,Uelzen,DE,0.252976185,>0.2
+861,HU312,Heves,HU,0.252678694,>0.2
+862,NL412,Midden-Noord-Brabant,NL,0.252487055,>0.2
+863,AT312,Linz-Wels,AT,0.251153592,>0.2
+864,AT331,Außerfern,AT,0.250353859,>0.2
+865,DE238,"Regensburg, Landkreis",DE,0.250295608,>0.2
+866,DE733,Hersfeld-Rotenburg,DE,0.249113468,>0.2
+867,NL226,Arnhem/Nijmegen,NL,0.248783389,>0.2
+868,ITI14,Firenze,IT,0.248638477,>0.2
+869,HR037,Dubrovačko-neretvanska županija,HR,0.248611887,>0.2
+870,RO124,Harghita,RO,0.248549383,>0.2
+871,ITC14,Verbano-Cusio-Ossola,IT,0.248531967,>0.2
+872,EL432,Λασίθι (Lasithi),EL,0.247987938,>0.2
+873,AT126,Wiener Umland/Nordteil,AT,0.247724841,>0.2
+874,ES511,Barcelona,ES,0.247494851,>0.2
+875,PL633,Trójmiejski,PL,0.247469192,>0.2
+876,ITC20,Valle d'Aosta/Vallée d'Aoste,IT,0.246944505,>0.2
+877,ITH44,Trieste,IT,0.245967437,>0.2
+878,ITC32,Savona,IT,0.245399415,>0.2
+879,NL323,IJmond,NL,0.245315832,>0.2
+880,DE407,Elbe-Elster,DE,0.245131289,>0.2
+881,HR043,Krapinsko-zagorska županija,HR,0.24500524,>0.2
+882,HU222,Vas,HU,0.244710846,>0.2
+883,DE273,"Kempten (Allgäu), Kreisfreie Stadt",DE,0.243992248,>0.2
+884,ITH31,Verona,IT,0.242376653,>0.2
+885,RO414,Olt,RO,0.242292131,>0.2
+886,HU231,Baranya,HU,0.242199095,>0.2
+887,RO123,Covasna,RO,0.241461431,>0.2
+888,EL434,Χανιά (Chania),EL,0.241437236,>0.2
+889,NL132,Zuidoost-Drenthe,NL,0.241348761,>0.2
+890,CZ010,Hlavní město Praha,CZ,0.24044313,>0.2
+891,NL211,Noord-Overijssel,NL,0.239387104,>0.2
+892,ITI12,Lucca,IT,0.238869552,>0.2
+893,ITF62,Crotone,IT,0.23860827,>0.2
+894,HU333,Csongrád,HU,0.238176091,>0.2
+895,PL514,Miasto Wrocław,PL,0.237432969,>0.2
+896,SE211,Jönköpings län,SE,0.237425038,>0.2
+897,HR049,Požeško-slavonska županija,HR,0.237217191,>0.2
+898,NL221,Veluwe,NL,0.237012933,>0.2
+899,RO311,Argeş,RO,0.236750359,>0.2
+900,RO422,Caraş-Severin,RO,0.236639649,>0.2
+901,ITF44,Brindisi,IT,0.235992449,>0.2
+902,SE124,Örebro län,SE,0.235966044,>0.2
+903,ITC33,Genova,IT,0.235793308,>0.2
+904,PT181,Alentejo Litoral,PT,0.23540671,>0.2
+905,ITH10,Bolzano-Bozen,IT,0.235193878,>0.2
+906,ITF65,Reggio di Calabria,IT,0.234724227,>0.2
+907,RO313,Dâmboviţa,RO,0.234302651,>0.2
+908,PL127,Miasto Warszawa,PL,0.233986108,>0.2
+909,SE313,Gävleborgs län,SE,0.233811203,>0.2
+910,HR046,Međimurska županija,HR,0.233608329,>0.2
+911,DE236,Neumarkt i. d. OPf.,DE,0.233359257,>0.2
+912,DE214,Altötting,DE,0.233308778,>0.2
+913,ITH34,Treviso,IT,0.233262561,>0.2
+914,BG325,Силистра (Silistra),BG,0.232880741,>0.2
+915,ITI19,Siena,IT,0.232733542,>0.2
+916,ITH33,Belluno,IT,0.232724236,>0.2
+917,NL342,Overig Zeeland,NL,0.232553319,>0.2
+918,SE312,Dalarnas län,SE,0.23252289,>0.2
+919,ITC4D,Monza e della Brianza,IT,0.232143485,>0.2
+920,RO314,Giurgiu,RO,0.231491407,>0.2
+921,DE712,"Frankfurt am Main, Kreisfreie Stadt",DE,0.231193487,>0.2
+922,RO222,Buzău,RO,0.230996088,>0.2
+923,ITF33,Napoli,IT,0.229074223,>0.2
+924,ITH52,Parma,IT,0.228372759,>0.2
+925,AT225,West- und Südsteiermark,AT,0.22826177,>0.2
+926,SE122,Södermanlands län,SE,0.228182702,>0.2
+927,Dec-03,Neunkirchen,DE,0.228015426,>0.2
+928,AT311,Innviertel,AT,0.227153348,>0.2
+929,RO412,Gorj,RO,0.226600367,>0.2
+930,RO215,Suceava,RO,0.226590254,>0.2
+931,EL515,"Θάσος, Καβάλα (Thasos, Kavala)",EL,0.225554561,>0.2
+932,EL653,"Λακωνία, Μεσσηνία (Lakonia, Messinia)",EL,0.224936929,>0.2
+933,ITC42,Como,IT,0.223683923,>0.2
+934,DE278,Günzburg,DE,0.223168525,>0.2
+935,HU233,Tolna,HU,0.223095848,>0.2
+936,NL224,Zuidwest-Gelderland,NL,0.222738372,>0.2
+937,AT223,Östliche Obersteiermark,AT,0.222611828,>0.2
+938,ITI44,Latina,IT,0.221764133,>0.2
+939,RO225,Tulcea,RO,0.221164053,>0.2
+940,PL415,Miasto Poznań,PL,0.220867369,>0.2
+941,PL213,Miasto Kraków,PL,0.220753164,>0.2
+942,DE403,"Frankfurt (Oder), Kreisfreie Stadt",DE,0.219375833,>0.2
+943,ITF51,Potenza,IT,0.219366278,>0.2
+944,NL212,Zuidwest-Overijssel,NL,0.219246553,>0.2
+945,EL524,Πέλλα (Pella),EL,0.219042113,>0.2
+946,HR04C,Vukovarsko-srijemska županija,HR,0.218860795,>0.2
+947,NL121,Noord-Friesland,NL,0.218431448,>0.2
+948,PL613,Bydgosko-toruński,PL,0.218332397,>0.2
+949,PL22A,Katowicki,PL,0.217839314,>0.2
+950,ES617,Málaga,ES,0.217480573,>0.2
+951,AT332,Innsbruck,AT,0.2173415,>0.2
+952,ITH41,Pordenone,IT,0.216271168,>0.2
+953,ITH32,Vicenza,IT,0.216148564,>0.2
+954,NL338,Oost-Zuid-Holland,NL,0.215867746,>0.2
+955,DEB34,"Ludwigshafen am Rhein, Kreisfreie Stadt",DE,0.215719836,>0.2
+956,CZ064,Jihomoravský kraj,CZ,0.215349981,>0.2
+957,HU313,Nógrád,HU,0.215283037,>0.2
+958,ITI31,Pesaro e Urbino,IT,0.215260224,>0.2
+959,PT16F,Região de Leiria,PT,0.215104797,>0.2
+960,RO423,Hunedoara,RO,0.214883536,>0.2
+961,BE353,Arr. Philippeville,BE,0.214835687,>0.2
+962,ITF63,Catanzaro,IT,0.214678039,>0.2
+963,AT226,Westliche Obersteiermark,AT,0.214505702,>0.2
+964,ITC16,Cuneo,IT,0.214359008,>0.2
+965,ITC15,Novara,IT,0.214151182,>0.2
+966,RO216,Vaslui,RO,0.213336227,>0.2
+967,EL543,Ιωάννινα (Ioannina),EL,0.213135714,>0.2
+968,AT333,Osttirol,AT,0.212646813,>0.2
+969,SE311,Värmlands län,SE,0.212456298,>0.2
+970,ITH55,Bologna,IT,0.21203572,>0.2
+971,ITI45,Frosinone,IT,0.2119355,>0.2
+972,AT213,Unterkärnten,AT,0.211396901,>0.2
+973,ITH51,Piacenza,IT,0.211307888,>0.2
+974,RO411,Dolj,RO,0.211193503,>0.2
+975,SE231,Hallands län,SE,0.210690138,>0.2
+976,RO211,Bacău,RO,0.210457613,>0.2
+977,ITC41,Varese,IT,0.209947393,>0.2
+978,ES424,Guadalajara,ES,0.209451743,>0.2
+979,ITH54,Modena,IT,0.209278256,>0.2
+980,ITH36,Padova,IT,0.20898981,>0.2
+981,ITC48,Pavia,IT,0.208239747,>0.2
+982,AT123,Sankt Pölten,AT,0.207349051,>0.2
+983,PT11D,Douro,PT,0.206971831,>0.2
+984,PL524,Opolski,PL,0.206426027,>0.2
+985,AT112,Nordburgenland,AT,0.206179992,>0.2
+986,RO221,Brăila,RO,0.205641325,>0.2
+987,AT121,Mostviertel-Eisenwurzen,AT,0.205621204,>0.2
+988,AT335,Tiroler Unterland,AT,0.205606839,>0.2
+989,ITG17,Catania,IT,0.205587243,>0.2
+990,PL324,Przemyski,PL,0.205476233,>0.2
+991,PL113,Miasto Łódź,PL,0.205137803,>0.2
+992,ITF47,Bari,IT,0.20496576,>0.2
+993,ITF11,L'Aquila,IT,0.204932755,>0.2
+994,RO214,Neamţ,RO,0.204765957,>0.2
+995,EL533,Φλώρινα (Florina),EL,0.204187831,>0.2
+996,ITI41,Viterbo,IT,0.204160801,>0.2
+997,ITC11,Torino,IT,0.203527009,>0.2
+998,ITG18,Ragusa,IT,0.203355608,>0.2
+999,ITH35,Venezia,IT,0.203274319,>0.2
+1000,ITG13,Messina,IT,0.203271966,>0.2
+1001,AT224,Oststeiermark,AT,0.202164582,>0.2
+1002,HU331,Bács-Kiskun,HU,0.201964894,>0.2
+1003,ITI32,Ancona,IT,0.20189462,>0.2
+1004,LT00A,Vilniaus apskritis,LT,0.201562111,>0.2
+1005,ITH20,Trento,IT,0.201340958,>0.2
+1006,PL623,Ełcki,PL,0.200748042,>0.2
+1007,ITC17,Asti,IT,0.200618468,>0.2
+1008,HU332,Békés,HU,0.200208111,>0.2
+1009,PL345,Suwalski,PL,0.200024594,>0.2
+1010,DE401,"Brandenburg an der Havel, Kreisfreie Stadt",DE,0.2,>0.2
+1011,HU322,Jász-Nagykun-Szolnok,HU,0.199949407,>0.1
+1012,EL644,Φθιώτιδα (Fthiotida),EL,0.199853801,>0.1
+1013,PL128,Radomski,PL,0.19980506,>0.1
+1014,PL344,Łomżyński,PL,0.199478418,>0.1
+1015,RO212,Botoşani,RO,0.199092121,>0.1
+1016,ITH59,Rimini,IT,0.198955437,>0.1
+1017,AT342,Rheintal-Bodenseegebiet,AT,0.197709167,>0.1
+1018,SE214,Gotlands län,SE,0.197559036,>0.1
+1019,HR034,Šibensko-kninska županija,HR,0.197229713,>0.1
+1020,PL12D,Ostrołęcki,PL,0.19704548,>0.1
+1021,NL111,Oost-Groningen,NL,0.196967321,>0.1
+1022,NL131,Noord-Drenthe,NL,0.196949669,>0.1
+1023,ITC13,Biella,IT,0.196515836,>0.1
+1024,PL314,Lubelski,PL,0.195844638,>0.1
+1025,PL12C,Płocki,PL,0.195504435,>0.1
+1026,HR031,Primorsko-goranska županija,HR,0.195502128,>0.1
+1027,ITF46,Foggia,IT,0.195464996,>0.1
+1028,DEE04,Altmarkkreis Salzwedel,DE,0.195258165,>0.1
+1029,ES630,Ceuta,ES,0.194519648,>0.1
+1030,ITC12,Vercelli,IT,0.194291689,>0.1
+1031,ITG12,Palermo,IT,0.194163126,>0.1
+1032,SE213,Kalmar län,SE,0.193981047,>0.1
+1033,SE322,Jämtlands län,SE,0.193558619,>0.1
+1034,PL224,Częstochowski,PL,0.192726156,>0.1
+1035,PL424,Miasto Szczecin,PL,0.192634339,>0.1
+1036,HU311,Borsod-Abaúj-Zemplén,HU,0.191291585,>0.1
+1037,PT150,Algarve,PT,0.191254618,>0.1
+1038,PT200,Região Autónoma dos Açores,PT,0.190920059,>0.1
+1039,PT186,Alto Alentejo,PT,0.190861122,>0.1
+1040,PL517,Wałbrzyski,PL,0.190806506,>0.1
+1041,ITG25,Sassari,IT,0.190609252,>0.1
+1042,PT16E,Região de Coimbra,PT,0.190480367,>0.1
+1043,HU213,Veszprém,HU,0.190365825,>0.1
+1044,NL123,Zuidoost-Friesland,NL,0.189534763,>0.1
+1045,PT111,Alto Minho,PT,0.188946518,>0.1
+1046,ES513,Lleida,ES,0.18888315,>0.1
+1047,PL343,Białostocki,PL,0.188757463,>0.1
+1048,ITF31,Caserta,IT,0.188267948,>0.1
+1049,ITF32,Benevento,IT,0.188100723,>0.1
+1050,ITC34,La Spezia,IT,0.187398797,>0.1
+1051,PL621,Elbląski,PL,0.186834119,>0.1
+1052,ITH37,Rovigo,IT,0.186627661,>0.1
+1053,PL312,Chełmsko-zamojski,PL,0.185930063,>0.1
+1054,ES611,Almería,ES,0.185812306,>0.1
+1055,RO112,Bistriţa-Năsăud,RO,0.185344279,>0.1
+1056,DE24D,Wunsiedel i. Fichtelgebirge,DE,0.185004965,>0.1
+1057,AT122,Niederösterreich-Süd,AT,0.184881045,>0.1
+1058,ITC18,Alessandria,IT,0.184873773,>0.1
+1059,PL12E,Siedlecki,PL,0.184745209,>0.1
+1060,HR044,Varaždinska županija,HR,0.184717632,>0.1
+1061,AT212,Oberkärnten,AT,0.184653227,>0.1
+1062,PL636,Słupski,PL,0.184336569,>0.1
+1063,ITI21,Perugia,IT,0.18272082,>0.1
+1064,PT16H,Beira Baixa,PT,0.182407257,>0.1
+1065,ITI22,Terni,IT,0.182243007,>0.1
+1066,ES521,Alicante / Alacant,ES,0.182020195,>0.1
+1067,HU221,Győr-Moson-Sopron,HU,0.181974606,>0.1
+1068,ITF45,Lecce,IT,0.181774879,>0.1
+1069,ITI16,Livorno,IT,0.181592981,>0.1
+1070,PL114,Łódzki,PL,0.181358373,>0.1
+1071,ITF14,Chieti,IT,0.180686851,>0.1
+1072,ITC43,Lecco,IT,0.180410553,>0.1
+1073,AT111,Mittelburgenland,AT,0.17990185,>0.1
+1074,ITH42,Udine,IT,0.179647419,>0.1
+1075,NL133,Zuidwest-Drenthe,NL,0.179139925,>0.1
+1076,ITH57,Ravenna,IT,0.178436712,>0.1
+1077,HR047,Bjelovarsko-bilogorska županija,HR,0.178241246,>0.1
+1078,ITF52,Matera,IT,0.178240822,>0.1
+1079,ITC4B,Mantova,IT,0.177680232,>0.1
+1080,EL511,Έβρος (Evros),EL,0.177428663,>0.1
+1081,ITI11,Massa-Carrara,IT,0.177398522,>0.1
+1082,ITF35,Salerno,IT,0.177285781,>0.1
+1083,ITH53,Reggio nell'Emilia,IT,0.176664788,>0.1
+1084,AT313,Mühlviertel,AT,0.176578593,>0.1
+1085,ITC4A,Cremona,IT,0.176461976,>0.1
+1086,ITC47,Brescia,IT,0.176439856,>0.1
+1087,PL325,Rzeszowski,PL,0.176189929,>0.1
+1088,ITF43,Taranto,IT,0.17550507,>0.1
+1089,PT112,Cávado,PT,0.175087065,>0.1
+1090,AT222,Liezen,AT,0.17460088,>0.1
+1091,ES704,Fuerteventura,ES,0.172366603,>0.1
+1092,PL414,Koniński,PL,0.172228592,>0.1
+1093,ITH58,Forlì-Cesena,IT,0.172200271,>0.1
+1094,HR036,Istarska županija,HR,0.171852084,>0.1
+1095,PL432,Zielonogórski,PL,0.171669436,>0.1
+1096,ITI17,Pisa,IT,0.171630432,>0.1
+1097,ES709,Tenerife,ES,0.171627408,>0.1
+1098,AT334,Tiroler Oberland,AT,0.171363447,>0.1
+1099,PL516,Legnicko-głogowski,PL,0.171045531,>0.1
+1100,RO415,Vâlcea,RO,0.17048875,>0.1
+1101,PL515,Jeleniogórski,PL,0.170226735,>0.1
+1102,ITI35,Fermo,IT,0.170050474,>0.1
+1103,PL229,Gliwicki,PL,0.16986674,>0.1
+1104,ITG27,Cagliari,IT,0.169788865,>0.1
+1105,BG343,Ямбол (Yambol),BG,0.168762434,>0.1
+1106,PL331,Kielecki,PL,0.168710451,>0.1
+1107,HR04B,Osječko-baranjska županija,HR,0.167541352,>0.1
+1108,SK042,Košický kraj,SK,0.16727766,>0.1
+1109,ITI42,Rieti,IT,0.167273234,>0.1
+1110,ES431,Badajoz,ES,0.167025697,>0.1
+1111,PL426,Koszaliński,PL,0.166425759,>0.1
+1112,ITC31,Imperia,IT,0.166174663,>0.1
+1113,AT125,Weinviertel,AT,0.16506572,>0.1
+1114,ITH43,Gorizia,IT,0.165021721,>0.1
+1115,EL542,Θεσπρωτία (Thesprotia),EL,0.164846999,>0.1
+1116,EL611,"Καρδίτσα, Τρίκαλα (Karditsa, Trikala)",EL,0.164810024,>0.1
+1117,PL326,Tarnobrzeski,PL,0.164689775,>0.1
+1118,PL12A,Warszawski zachodni,PL,0.164678856,>0.1
+1119,PL416,Kaliski,PL,0.164662669,>0.1
+1120,ITF12,Teramo,IT,0.164556234,>0.1
+1121,CZ080,Moravskoslezský kraj,CZ,0.164253314,>0.1
+1122,EE001,Põhja-Eesti,EE,0.162730606,>0.1
+1123,AT113,Südburgenland,AT,0.162366198,>0.1
+1124,ITF22,Campobasso,IT,0.161845324,>0.1
+1125,CZ041,Karlovarský kraj,CZ,0.161780464,>0.1
+1126,PT11B,Alto Tâmega,PT,0.160947058,>0.1
+1127,PL638,Starogardzki,PL,0.160781703,>0.1
+1128,PL115,Piotrkowski,PL,0.159964939,>0.1
+1129,CZ032,Plzeňský kraj,CZ,0.159933648,>0.1
+1130,ITF13,Pescara,IT,0.159541164,>0.1
+1131,PL311,Bialski,PL,0.159298668,>0.1
+1132,LT002,Kauno apskritis,LT,0.158875469,>0.1
+1133,EL621,Ζάκυνθος (Zakynthos),EL,0.158842222,>0.1
+1134,CZ020,Středočeský kraj,CZ,0.158722174,>0.1
+1135,ITC44,Sondrio,IT,0.158328799,>0.1
+1136,SI031,Pomurska,SI,0.157746256,>0.1
+1137,RO315,Ialomiţa,RO,0.157259359,>0.1
+1138,ITI34,Ascoli Piceno,IT,0.156486767,>0.1
+1139,PT16G,Viseu Dão Lafões,PT,0.155293733,>0.1
+1140,ES616,Jaén,ES,0.155211029,>0.1
+1141,PL219,Nowotarski,PL,0.154514826,>0.1
+1142,ES415,Salamanca,ES,0.154190154,>0.1
+1143,ITI33,Macerata,IT,0.154118545,>0.1
+1144,PL617,Inowrocławski,PL,0.152973241,>0.1
+1145,PL22B,Sosnowiecki,PL,0.152820342,>0.1
+1146,PL428,Szczeciński,PL,0.152069616,>0.1
+1147,EL612,Λάρισα (Larisa),EL,0.151836617,>0.1
+1148,ES416,Segovia,ES,0.151444622,>0.1
+1149,ITI18,Arezzo,IT,0.151346426,>0.1
+1150,SK032,Banskobystrický kraj,SK,0.149384671,>0.1
+1151,PL431,Gorzowski,PL,0.14933625,>0.1
+1152,ES532,Mallorca,ES,0.149198221,>0.1
+1153,HR033,Zadarska županija,HR,0.148812593,>0.1
+1154,PL616,Grudziądzki,PL,0.148554766,>0.1
+1155,ES422,Ciudad Real,ES,0.148288182,>0.1
+1156,PT300,Região Autónoma da Madeira,PT,0.147129124,>0.1
+1157,CZ063,Kraj Vysočina,CZ,0.147121736,>0.1
+1158,CZ052,Královéhradecký kraj,CZ,0.146859939,>0.1
+1159,ES421,Albacete,ES,0.146654138,>0.1
+1160,PL228,Bytomski,PL,0.145458521,>0.1
+1161,ITH56,Ferrara,IT,0.144388509,>0.1
+1162,ES523,Valencia / Val?ncia,ES,0.144382991,>0.1
+1163,PT11C,Tâmega e Sousa,PT,0.143577418,>0.1
+1164,PT184,Baixo Alentejo,PT,0.143547265,>0.1
+1165,EL526,Σέρρες (Serres),EL,0.143078664,>0.1
+1166,AT124,Waldviertel,AT,0.142953414,>0.1
+1167,HR041,Grad Zagreb,HR,0.142933334,>0.1
+1168,ES618,Sevilla,ES,0.142710065,>0.1
+1169,ITG29,Olbia-Tempio,IT,0.142588429,>0.1
+1170,ES512,Girona,ES,0.142345454,>0.1
+1171,ES242,Teruel,ES,0.141831165,>0.1
+1172,ES640,Melilla,ES,0.14177591,>0.1
+1173,ES130,Cantabria,ES,0.141769589,>0.1
+1174,ES705,Gran Canaria,ES,0.141256348,>0.1
+1175,CZ031,Jihočeský kraj,CZ,0.14005639,>0.1
+1176,FI195,Pohjanmaa,FI,0.139387463,>0.1
+1177,PT11E,Terras de Trás-os-Montes,PT,0.138855046,>0.1
+1178,PL12B,Ciechanowski,PL,0.138663284,>0.1
+1179,ITF34,Avellino,IT,0.138087382,>0.1
+1180,ITF21,Isernia,IT,0.136747248,>0.1
+1181,ES212,Gipuzkoa,ES,0.13564717,>0.1
+1182,BG412,София (Sofia),BG,0.135621788,>0.1
+1183,ITF48,Barletta-Andria-Trani,IT,0.134332854,>0.1
+1184,ITI15,Prato,IT,0.133561126,>0.1
+1185,CZ071,Olomoucký kraj,CZ,0.132340247,>0.1
+1186,ES113,Ourense,ES,0.132202581,>0.1
+1187,ES114,Pontevedra,ES,0.131601902,>0.1
+1188,PL523,Nyski,PL,0.131272488,>0.1
+1189,ES425,Toledo,ES,0.131105517,>0.1
+1190,PT16D,Região de Aveiro,PT,0.131003034,>0.1
+1191,EL523,Κιλκίς (Kilkis),EL,0.130201556,>0.1
+1192,BG312,Монтана (Montana),BG,0.130038444,>0.1
+1193,HR042,Zagrebačka županija,HR,0.129695751,>0.1
+1194,ES220,Navarra,ES,0.129313078,>0.1
+1195,CZ051,Liberecký kraj,CZ,0.129047973,>0.1
+1196,PL618,Świecki,PL,0.128766023,>0.1
+1197,ES412,Burgos,ES,0.128308952,>0.1
+1198,EL531,"Γρεβενά, Κοζάνη (Grevena, Kozani)",EL,0.12748674,>0.1
+1199,CZ042,Ústecký kraj,CZ,0.127486667,>0.1
+1200,ITG11,Trapani,IT,0.126611469,>0.1
+1201,PL418,Poznański,PL,0.126291463,>0.1
+1202,ES413,León,ES,0.126229924,>0.1
+1203,PL214,Krakowski,PL,0.125802522,>0.1
+1204,PL619,Włocławski,PL,0.125799007,>0.1
+1205,EL521,Ημαθία (Imathia),EL,0.125291783,>0.1
+1206,CZ053,Pardubický kraj,CZ,0.125215234,>0.1
+1207,ITI13,Pistoia,IT,0.124323423,>0.1
+1208,ITG28,Oristano,IT,0.12308089,>0.1
+1209,SK010,Bratislavský kraj,SK,0.123059173,>0.1
+1210,FI1C1,Varsinais-Suomi,FI,0.122240154,>0.1
+1211,ES432,Cáceres,ES,0.122221105,>0.1
+1212,PT185,Lezíria do Tejo,PT,0.122133733,>0.1
+1213,ES111,A Coruña,ES,0.122068714,>0.1
+1214,HU323,Szabolcs-Szatmár-Bereg,HU,0.122061173,>0.1
+1215,ES620,Murcia,ES,0.121530696,>0.1
+1216,PL417,Leszczyński,PL,0.119901569,>0.1
+1217,ES514,Tarragona,ES,0.119740191,>0.1
+1218,ES213,Bizkaia,ES,0.119211289,>0.1
+1219,ES120,Asturias,ES,0.118628008,>0.1
+1220,BG331,Варна (Varna),BG,0.118224062,>0.1
+1221,ES243,Zaragoza,ES,0.117893119,>0.1
+1222,EL411,"Λέσβος, Λήμνος (Lesvos, Limnos)",EL,0.117506735,>0.1
+1223,CZ072,Zlínský kraj,CZ,0.11744167,>0.1
+1224,PL225,Bielski,PL,0.116518011,>0.1
+1225,ES703,El Hierro,ES,0.116163344,>0.1
+1226,ITG14,Agrigento,IT,0.116040641,>0.1
+1227,ES533,Menorca,ES,0.115592576,>0.1
+1228,ITG15,Caltanissetta,IT,0.115553549,>0.1
+1229,PL411,Pilski,PL,0.11553597,>0.1
+1230,ES613,Córdoba,ES,0.11491687,>0.1
+1231,ES615,Huelva,ES,0.114812276,>0.1
+1232,LT008,Telšių apskritis,LT,0.113155046,>0.1
+1233,SK023,Nitriansky kraj,SK,0.11271942,>0.1
+1234,ES112,Lugo,ES,0.112372025,>0.1
+1235,PL315,Puławski,PL,0.111563605,>0.1
+1236,PL518,Wrocławski,PL,0.110837521,>0.1
+1237,FI1C4,Kymenlaakso,FI,0.109427257,>0.1
+1238,EL514,Δράμα (Drama),EL,0.10942223,>0.1
+1239,ITG2C,Carbonia-Iglesias,IT,0.108979783,>0.1
+1240,PL22C,Tyski,PL,0.108230835,>0.1
+1241,BG333,Шумен (Shumen),BG,0.107113942,>0.1
+1242,ES707,La Palma,ES,0.106771181,>0.1
+1243,ES211,Araba/Álava,ES,0.105452098,>0.1
+1244,LT001,Alytaus apskritis,LT,0.105237028,>0.1
+1245,FI196,Satakunta,FI,0.105072766,>0.1
+1246,SK022,Trenčiansky kraj,SK,0.105011571,>0.1
+1247,LT003,Klaipėdos apskritis,LT,0.10479157,>0.1
+1248,ES423,Cuenca,ES,0.104304728,>0.1
+1249,ES241,Huesca,ES,0.10413549,>0.1
+1250,LT005,Panevėžio apskritis,LT,0.103714099,>0.1
+1251,PL21A,Oświęcimski,PL,0.102807359,>0.1
+1252,BG421,Пловдив (Plovdiv),BG,0.102066991,>0.1
+1253,LV006,Rīga,LV,0.102043719,>0.1
+1254,LT007,Tauragės apskritis,LT,0.099547519,>0.09
+1255,SK031,Žilinský kraj,SK,0.099242288,>0.09
+1256,ITG26,Nuoro,IT,0.099125767,>0.09
+1257,EE008,Lõuna-Eesti,EE,0.097727859,>0.09
+1258,SK021,Trnavský kraj,SK,0.096815139,>0.09
+1259,LT006,Šiaulių apskritis,LT,0.095084457,>0.09
+1260,ES230,La Rioja,ES,0.09439016,>0.09
+1261,ES417,Soria,ES,0.093198334,>0.09
+1262,LT009,Utenos apskritis,LT,0.092901277,>0.09
+1263,ITI1A,Grosseto,IT,0.092874466,>0.09
+1264,ES522,Castellón / Castelló,ES,0.091971919,>0.09
+1265,ITG2B,Medio Campidano,IT,0.091064328,>0.09
+1266,ES531,Eivissa y Formentera,ES,0.089432152,>0.08
+1267,PL332,Sandomiersko-jędrzejowski,PL,0.089386568,>0.08
+1268,PL227,Rybnicki,PL,0.089295765,>0.08
+1269,ES708,Lanzarote,ES,0.089107343,>0.08
+1270,EL525,Πιερία (Pieria),EL,0.0887286,>0.08
+1271,AT321,Lungau,AT,0.087651622,>0.08
+1272,PL622,Olsztyński,PL,0.086770133,>0.08
+1273,FI193,Keski-Suomi,FI,0.086266133,>0.08
+1274,SK041,Prešovský kraj,SK,0.084715575,>0.08
+1275,ITG2A,Ogliastra,IT,0.082712879,>0.08
+1276,BG323,Русе (Ruse),BG,0.081595112,>0.08
+1277,PL116,Sieradzki,PL,0.081454186,>0.08
+1278,FI1C5,Etelä-Karjala,FI,0.080608528,>0.08
+1279,ES414,Palencia,ES,0.080425286,>0.08
+1280,EL513,Ροδόπη (Rodopi),EL,0.07904154,>0.07
+1281,EL642,Εύβοια (Evvoia),EL,0.07902343,>0.07
+1282,LT004,Marijampolės apskritis,LT,0.078362042,>0.07
+1283,ES419,Zamora,ES,0.077854693,>0.07
+1284,DE713,"Offenbach am Main, Kreisfreie Stadt",DE,0.077608377,>0.07
+1285,SI041,Osrednjeslovenska,SI,0.077235744,>0.07
+1286,PL323,Krośnieński,PL,0.076408963,>0.07
+1287,ES418,Valladolid,ES,0.073519323,>0.07
+1288,FI1D2,Pohjois-Savo,FI,0.073030824,>0.07
+1289,FI1D7,Lappi,FI,0.070404987,>0.07
+1290,SI032,Podravska,SI,0.068862466,>0.06
+1291,FI1C3,Päijät-Häme,FI,0.067619101,>0.06
+1292,ES411,Ávila,ES,0.066239205,>0.06
+1293,PL634,Gdański,PL,0.065636765,>0.06
+1294,SI044,Obalno-kraška,SI,0.064239116,>0.06
+1295,BG422,Хасково (Haskovo),BG,0.063993055,>0.06
+1296,SI034,Savinjska,SI,0.061398738,>0.06
+1297,BG344,Стара Загора (Stara Zagora),BG,0.061334394,>0.06
+1298,PL637,Chojnicki,PL,0.060365404,>0.06
+1299,BG321,Велико Търново (Veliko Tarnovo),BG,0.059488825,>0.05
+1300,PL129,Warszawski wschodni,PL,0.059463052,>0.05
+1301,SI035,Zasavska,SI,0.059345129,>0.05
+1302,SI038,Primorsko-notranjska,SI,0.057242581,>0.05
+1303,SI043,Goriška,SI,0.056723784,>0.05
+1304,FI1D3,Pohjois-Karjala,FI,0.056537314,>0.05
+1305,FI1D4,Kainuu,FI,0.055724628,>0.05
+1306,SI036,Posavska,SI,0.055425171,>0.05
+1307,SI042,Gorenjska,SI,0.055086142,>0.05
+1308,SI037,Jugovzhodna Slovenija,SI,0.054826139,>0.05
+1309,BG324,Разград (Razgrad),BG,0.054445886,>0.05
+1310,FI200,Åland,FI,0.053886827,>0.05
+1311,PL117,Skierniewicki,PL,0.053448909,>0.05
+1312,BG332,Добрич (Dobrich),BG,0.053148846,>0.05
+1313,BG413,Благоевград (Blagoevgrad),BG,0.053026626,>0.05
+1314,SI033,Koroška,SI,0.051570586,>0.05
+1315,FI1C2,Kanta-Häme,FI,0.050807195,>0.05
+1316,HR04A,Brodsko-posavska županija,HR,0.050768499,>0.05
+1317,EE006,Kesk-Eesti,EE,0.049034015,>0.04
+1318,EE004,Lääne-Eesti,EE,0.048763684,>0.04
+1319,BG314,Плевен (Pleven),BG,0.048576393,>0.04
+1320,EE007,Kirde-Eesti,EE,0.048067265,>0.04
+1321,FI1D5,Keski-Pohjanmaa,FI,0.047919862,>0.04
+1322,EL643,Ευρυτανία (Evrytania),EL,0.047619048,>0.04
+1323,FI194,Etelä-Pohjanmaa,FI,0.043902901,>0.04
+1324,LV003,Kurzeme,LV,0.043432837,>0.04
+1325,BG334,Търговище (Targovishte),BG,0.041400407,>0.04
+1326,BG415,Кюстендил (Kyustendil),BG,0.03960571,>0.03
+1327,PL427,Szczecinecko-pyrzycki,PL,0.039233008,>0.03
+1328,BG425,Кърджали (Kardzhali),BG,0.036419679,>0.03
+1329,LV007,Pierīga,LV,0.035691459,>0.03
+1330,LV009,Zemgale,LV,0.035519232,>0.03
+1331,BG311,Видин (Vidin),BG,0.034865681,>0.03
+1332,LV005,Latgale,LV,0.034201782,>0.03
+1333,FI1D1,Etelä-Savo,FI,0.034092052,>0.03
+1334,BG322,Габрово (Gabrovo),BG,0.033862299,>0.03
+1335,LV008,Vidzeme,LV,0.032494069,>0.03
+1336,BG414,Перник (Pernik),BG,0.031800454,>0.03
+1337,BG423,Пазарджик (Pazardzhik),BG,0.029994503,>0.02
+1338,BG313,Враца (Vratsa),BG,0.029413545,>0.02
+1339,BG315,Ловеч (Lovech),BG,0.029039462,>0.02
+1340,BG341,Бургас (Burgas),BG,0.027898282,>0.02
+1341,BG342,Сливен (Sliven),BG,0.024227947,>0.02
+1342,ES706,La Gomera,ES,0.015192355,>0.01
