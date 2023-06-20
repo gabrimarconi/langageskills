@@ -1,0 +1,11 @@
+"","occup","skill","pcp","pcp_is_pos","english_cond_skill","share_english","N_all","occupation"
+"1","OC1","Spanish",0.971084797220651,1,0.582036808813416,0.0336078862476546,5135015,"Managers"
+"2","OC2","language teaching methods",0.976707392957376,1,1,0.0233181226923663,15088779,"Professionals"
+"3","OC3","Dutch",0.985468981734389,1,0.537122351761314,0.0149968713706621,10170588,"Technicians and associate professionals"
+"4","OC4","Hungarian",0.981401818230867,1,0.684701492537313,0.0186409128921741,4633625,"Clerical support workers"
+"5","OC5","Dutch",0.987308992733979,1,0.637705007953486,0.0136135453057862,5442594,"Service and sales workers"
+"6","OC6",NA,NA,NA,NA,740980257.80981,127872,"Skilled agricultural, forestry and fishery workers"
+"7","OC7","legal studies",0.996070400293618,1,0.135646687697161,0.00387713539403765,4402993,"Craft and related trades workers"
+"8","OC8","French",0.99115051235794,1,0.564021804966687,0.00949152954182384,3292620,"Plant and machine operators, and assemblers"
+"9","OC9","advocate for others",0.99862160390388,1,0.995867768595041,0.00148750396652571,4399316,"Elementary occupations"
+"10","TOTL","language teaching methods",0.983073858089481,1,1,0.0169334483281228,52693402,NA

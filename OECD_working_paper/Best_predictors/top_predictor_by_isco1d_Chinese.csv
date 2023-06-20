@@ -1,0 +1,11 @@
+"","occup","skill","pcp","pcp_is_pos","english_cond_skill","share_english","N_all","occupation"
+"1","OC1","take food and beverage orders from customers",0.995259604889178,1,0.296428571428571,0.00469599407207184,5135015,"Managers"
+"2","OC2","control kiln firing",0.992178492375029,1,0.40633608815427,0.00781249430454247,15088779,"Professionals"
+"3","OC3","decision support systems",0.98263591052946,1,0.706686930091185,0.0173908332536919,10170588,"Technicians and associate professionals"
+"4","OC4","aerodynamics",0.992331489924195,1,0.908196721311475,0.0077222477002347,4633625,"Clerical support workers"
+"5","OC5","climbing equipment",0.981878861439968,1,0.822761194029851,0.0182482838146663,5442594,"Service and sales workers"
+"6","OC6","aerodynamics",0.98828516016016,1,0.592643051771117,0.0127784034034034,127872,"Skilled agricultural, forestry and fishery workers"
+"7","OC7","ski",0.982155774492487,1,0.636627906976744,0.0178655746216267,4402993,"Craft and related trades workers"
+"8","OC8","Android",0.981853356901191,1,0.541935483870968,0.018154539546015,3292620,"Plant and machine operators, and assemblers"
+"9","OC9","babysitting",0.985369771118965,1,0.733924611973392,0.0149180008892291,4399316,"Elementary occupations"
+"10","TOTL","decision support systems",0.987488091962633,1,0.607798165137615,0.0125190436555985,52693402,NA

@@ -1,0 +1,11 @@
+"","occup","skill","pcp","pcp_is_pos","english_cond_skill","share_english","N_all","occupation"
+"1","OC1","trademarks",0.782163245871726,1,0.63620602165088,0.219091278214377,5135015,"Managers"
+"2","OC2","search engine optimisation",0.769456826162011,1,0.653134811401233,0.232851180337388,15088779,"Professionals"
+"3","OC3","business analysis",0.756794985697975,1,0.731395052547829,0.251955245852059,10170588,"Technicians and associate professionals"
+"4","OC4","business analysis",0.715835873641048,1,0.869963621387878,0.29347001537673,4633625,"Clerical support workers"
+"5","OC5","business analysis",0.777668148680574,1,0.868204130777068,0.223792735596298,5442594,"Service and sales workers"
+"6","OC6","precision measuring instruments",0.991030092592593,1,0.405660377358491,0.008813501001001,127872,"Skilled agricultural, forestry and fishery workers"
+"7","OC7","material mechanics",0.817560918220856,1,0.606727828746177,0.183390252948392,4402993,"Craft and related trades workers"
+"8","OC8","perform business analysis",0.828077032879591,1,0.827048768225239,0.173898597469492,3292620,"Plant and machine operators, and assemblers"
+"9","OC9","robotic components",0.949335760377295,1,0.823333333333333,0.0507524351512826,4399316,"Elementary occupations"
+"10","TOTL","business analysis",0.786005086557137,1,0.584843380436882,0.216029020103883,52693402,NA
